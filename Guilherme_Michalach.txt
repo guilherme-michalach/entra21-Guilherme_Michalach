@@ -1,0 +1,174 @@
+1)
+
+<script>
+
+    let nome = "Guilherme"
+    let mensagem = "Oi, meu nome é "
+    
+    console.log(mensagem + nome)
+
+</script>
+
+2)
+
+<script>
+
+    console.log(`Cadastro de Funcionários: \n 1) Cadastrar funcionário \n 2) Listar funcionários \n 3) Editar funcionário \n 4) Deletar funcionário \n 5) Sair  -->`)
+
+</script>
+
+3)
+
+<script>
+
+    let nome = "João"
+    let admin = `${nome}`
+
+    console.log(nome)
+
+</script>
+
+4)
+
+<script>
+
+    let nome = prompt("Digite seu nome")
+    let idade = prompt("Digite sua idade")
+    let peso = prompt("Digite seu peso")
+    let altura = prompt("Digite sua altura")
+    let telefone = prompt("Digite seu telefone")
+
+    console.log(`Nome: ${nome}\nIdade: ${idade}\nPeso: ${peso}\nAltura: ${altura}\nTelefone: ${telefone}`)
+
+</script>
+
+5) 
+
+<script>
+
+    let titulo = "Jogador Número 1"
+    let edicao = "Leya 1° Edição"
+    let autor = "Ernest Cline"
+    let dataPublicacao = "10 de outubro de 2019"
+
+    console.log(`Título: ${titulo}\nEdição: ${edicao}\nAutor: ${autor}\nData de Publicacao: ${dataPublicacao}`)
+
+</script>
+
+6)
+
+<script>
+
+    let dataNascimento = "14/03/1981"
+    let qtdFilhos = "3 Filhos"
+    let currentUser = "Usuário atual: Guilherme"
+
+    console.log(`${dataNascimento}\n${qtdFilhos}\n${currentUser}`)
+
+</script>
+
+7)
+
+let nome = "João"
+console.log(`Olá ${1}`) // Olá 1
+console.log(`Olá ${"nome"}`) // Olá nome
+alert(`Olá ${nome}`) // Olá João
+
+8)
+
+A saida de dados será 121.
+
+9)
+
+Os valores de A e X serão respectivamente 4 e 5.
+
+10)
+
+A) "" + 1 + 0 // 10
+B) "" - 1 + 0 // -1
+C) 6 / "3" // 2
+D) "2" * "3" // 6
+E) 4 + 5 + "px" // 9px
+F) "$" + 4 + 5 // $45
+G) "4" - 2 // 2
+
+11)
+
+<script>
+
+    let altura = Number(prompt("Digite a altura do seu quadrado:"))
+    let largura = Number(prompt("Digite a largura do seu quadrado"))
+
+    let area = (altura + largura) // see later
+    let perimetro = (altura * 2 + largura * 2)
+
+    console.log(`A área do seu quadrado é: ${area}\nO perímetro do seu quadrado é: ${perimetro}`)
+
+</script>
+
+12)
+
+<script>
+
+    let numero1 = Number(prompt("Digite o primeiro número"))
+    let numero2 = Number(prompt("Digite o segundo número"))
+    let soma = (numero1 + numero2)
+
+    console.log(`A soma dos números é: ${soma}`)
+
+</script>
+
+13)
+
+<script>
+
+    let nota1 = Number(prompt("Digite a primeira nota"))
+    let nota2 = Number(prompt("Digite a segunda nota"))
+    let media = (nota1 + nota2)/2
+
+    console.log(`A média das notas é: ${media.toFixed(2)}`)
+
+</script>
+
+14)
+
+<script>
+
+    let numero1 = Number(prompt("Escreva o primeiro número"))
+    let numero2 = Number(prompt("Escreva o segundo número"))
+    let numero3 = Number(prompt("Escreva o terceiro número"))
+
+    let calculo1 = (numero1 **)
+    let calculo2 = (numero2 * numero2)
+    let calculo3 = (numero3 * numero3)
+
+    console.log(`O quadrado do primeiro número é: ${calculo1}\nO quadrado do segundo número é: ${calculo2}\nO quadrado do terceiro número é: ${calculo3}`)
+
+</script>
+
+15)
+
+<script>
+
+    let  a = 10
+    let  b = 20
+    let  aux_a = a
+
+    a = b
+    b = aux_a
+
+    console.log(`Váriavel A = ${a}, Váriavel B = ${b}`)
+
+</script>
+
+16)
+
+<script>
+
+    let meses = Number(prompt("Digite a quantidade de meses: "))
+
+    let diasMeses = meses * 30
+
+    console.log(`Em ${meses} meses você terá um total de ${diasMeses} dias.`)
+
+</script>

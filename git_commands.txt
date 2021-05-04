@@ -1,0 +1,29 @@
+git init - inicializa o repositório 
+vs ou git?
+
+(powershell é code . no terminal dele)
+
+git add .\nome_arquivo
+git status vs 
+git commit -m "Commit Inicial" vs 
+git add . - util pra acrescentar mais de um arquivo vs
+git config --global user.name "Guilherme Michalach" vs 
+git config --global user.email "guilhermemichalach@gmail.com" vs
+git config --global --edit
+git config --global --list vs
+há o git config --local para usar esses comandos
+git log - histórico de commits vs
+git show - mostra melhor o último commit vs
+git show hash vs
+
+ver sobre SSH
+
+shift insert pra colar por garantia
+
+git branch -M main
+
+git pull vs
+
+git push vs
+
+git clone no bash
