@@ -48,7 +48,7 @@ Entrada:         Saída:
 
     let numero = Number(prompt("Digite um número:"))
 
-    if (numero % 2 == 0) {
+    if (numero % 2 === 0) {
         console.log(numero / 2)
     }
     
@@ -67,10 +67,9 @@ Entrada:         Saída:
 
     let numero = Number(prompt("Digite um número"))
 
-    if (numero % 2 == 0) {
+    if (numero % 2 === 0) {
         console.log("O número é Par")
-    }
-    else{
+    } else {
         console.log("O número é Impar")
     }
 
