@@ -91,8 +91,7 @@ Entrada:        Saída:
 
     if (numero > 20 && numero < 90) {
         console.log("O número está na faixa entre 20 e 90")
-    }
-    else{
+    } else {
         console.log("O número está fora da faixa")
     }
 
