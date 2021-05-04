@@ -88,14 +88,14 @@ PEDRO                SAIDA:
 <script>
 
     let nome = prompt("Escreva o nome do vendedor")
-    let vendasJoao = parseInt(1230.30)
-    let vendasPedro = parseInt(0)
+    let vendasJoao = parseFloat(1230.30)
+    let vendasPedro = parseFloat(0)
     let salario_fixo = 0
 
     if(nome=="JOAO") {
-        salario_fixo = parseInt(500) + vendasJoao   
+        salario_fixo = parseInt(500) + (0.15 * vendasJoao)   
     } else if(nome=="PEDRO") {
-        salario_fixo = parseInt(700) + vendasPedro
+        salario_fixo = parseInt(700) + (0.15 * vendasPedro)
     } 
 
     let salario_total = salario_fixo
