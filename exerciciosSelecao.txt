@@ -317,7 +317,6 @@ imprima o dia da semana correspondente a este numero. Isto é, domingo se for 1,
 
         default:
         console.log("Insira um dia válido")
-        break;
     }
 </script>
 
@@ -392,7 +391,6 @@ assim por diante.
 
         default:
         console.log("Digite um valor de 1 a 12")
-        break;
     }
 </script>
 
@@ -428,7 +426,6 @@ Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!
         break;
 
         default:
-        console.log("Valor Inválido!")
-        break;
+        console.log("Turno inválido!")
     }
 </script>
