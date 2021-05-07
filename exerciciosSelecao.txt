@@ -159,10 +159,10 @@ escreva	se ele é Equilátero, Isósceles ou Escaleno.	Sendo que:
     if (a === b && a === c) {
     console.log(`Seu triângulo é um triângulo equilátero`)
     }
-    else if (a === b || a === c) {
-    console.log(`Seu triângulo é um triângulo isósceles`)
-    } else {
+    else if (a != b && a != c && b != c) {
     console.log(`Seu triângulo é um triângulo escaleno`)
+    } else {
+    console.log(`Seu triângulo é um triângulo isósceles`)
     }
 </script>
 
@@ -239,7 +239,7 @@ informe se o resultado foi um empate, a vitória do primeiro time ou do segundo 
 
     if (idade >= 16 && idade < 18 || idade > 70) {
         console.log("Voto opcional")
-    } else if (idade >= 18 && idade <= 70) {
+    } else if (idade >= 18 && idade < 70) {
         console.log("Voto obrigatório")
     } else {
         console.log("Não precisa votar")
