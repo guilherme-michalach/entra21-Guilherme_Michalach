@@ -1,3 +1,78 @@
+1)
+While
+
+let i = 0
+while(i < 10) {
+    console.log("Hello World")
+    i++
+}
+Do/While
+let i = 0;
+
+do {console.log("Hello World")
+    i++
+} while (i<10)
+
+For 
+
+for (let i = 0; i< 10; i++) {
+    console.log("Hello World")
+}
+
+2)
+While
+
+let contagem = 0;
+let i = 0;
+while(i < 10) {
+    i++
+    console.log(`Estou aparecendo pela ${++contagem} vez`)
+}
+
+Do/While
+
+let contagem = 0;
+let i = 0;
+do { console.log(`Estou aparecendo pela ${++contagem} vez` )
+    i ++ }
+while (i < 10)
+
+For
+
+let contagem = 0;
+for (let i = 0; i< 10; ++i + 1) {
+    
+    console.log(`Estou aparecendo pela ${++contagem} vez`)
+}
+
+3)
+
+let contagem = 11;
+
+for (let i = 10; i > 0; --i) {
+    console.log(--contagem)
+} console.log("Fim")
+
+4)
+
+for (let i = 3; i > 0; --i) {
+    let info = +prompt("Insira algo")
+    let info2 = +prompt("Insira") 
+    let valor = info - info2
+    
+    console.log(`${info} - ${info2} = ${valor}`)       
+}
+
+5)
+
+let numero = 0;
+for (let i = 100; i > 0; --i) {
+    numero += 1000;
+    let valor = numero
+
+    console.log(`${valor}`)       
+}
+
 6) 
 <script>
         
@@ -14,6 +89,10 @@
     console.log(`Média: ${media}`)
 
 </script>
+
+7)
+
+
 
 9) 
 <script>
