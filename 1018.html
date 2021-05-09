@@ -7,14 +7,36 @@
 </head>
 <body>
     <script>
-        let numero = 0;
-for (let i = 0; i < 1; i ++) {
-    numero = +prompt("Digite aqui um valor")
-    if (numero % 1 === 0) {
+        alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
+        let totalVotos = 0
+        let votosJose = 0
+        let votosMaria = 0
+        let votosJoao = 0
+        let votosNulo = 0
+        let votosBranco = 0
         
-    }
-    console.log(`${numero}`)       
-}
+
+        while (true) {
+            let voto = +prompt("Digite seu voto")
+            teste = voto
+            if (teste = 0) {
+                break 
+            }
+            if (voto = 1) {
+                votosJose++
+            } else if (voto = 2) {
+                votosMaria++
+            } else if (voto = 3) {
+                votosJoao++
+            } else if (voto = 4) {
+                votosNulo++
+            } else if (voto = 5) {
+                votosBranco++
+            }
+            
+        }
+        console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco}`)
+    
     </script>
 </body>
 </html>
