@@ -7,36 +7,43 @@
 </head>
 <body>
     <script>
-        alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
-        let totalVotos = 0
-        let votosJose = 0
-        let votosMaria = 0
-        let votosJoao = 0
-        let votosNulo = 0
-        let votosBranco = 0
-        
+        let primos = 0
 
-        while (true) {
-            let voto = +prompt("Digite seu voto")
-            teste = voto
-            if (teste = 0) {
-                break 
+        for (let i = 0; i < 20; i++) {
+
+            let media = +prompt(`Insira a média do aluno ${teste}:`)
+            teste++
+            if (0 >= media || media < 5) {
+            aluno1 = "Conceito D"
             }
-            if (voto = 1) {
-                votosJose++
-            } else if (voto = 2) {
-                votosMaria++
-            } else if (voto = 3) {
-                votosJoao++
-            } else if (voto = 4) {
-                votosNulo++
-            } else if (voto = 5) {
-                votosBranco++
-            }
-            
         }
-        console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco}`)
-    
+        console.log (teste)
     </script>
 </body>
 </html>
+
+<!-- <script>
+    let qtdPares = 0;
+    let qtdImpares = 0;
+
+    for (let i = 0; i < 10; i ++) {
+        let a = +prompt("Insira um valor")
+        if (a % 2 == 0) {
+            qtdPares++
+        } else {
+            qtdImpares++
+        }
+    }
+        
+    console.log(`Pares: ${qtdPares}`)
+    console.log(`Impares: ${qtdImpares}`)
+</script> -->
+<!-- <script> 
+    let numero = +prompt("Digite aqui um valor")
+    for (let i = 0; i <= numero; i ++) {
+    
+        if (i % 2 != 0 ) {
+        console.log(i)
+        }
+    }
+</script> -->
