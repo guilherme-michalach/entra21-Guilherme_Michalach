@@ -1,0 +1,274 @@
+1)
+While
+
+let i = 0
+while(i < 10) {
+    console.log("Hello World")
+    i++
+}
+Do/While
+let i = 0;
+
+do {console.log("Hello World")
+    i++
+} while (i<10)
+
+For 
+
+for (let i = 0; i< 10; i++) {
+    console.log("Hello World")
+}
+
+2)
+While
+
+let contagem = 0;
+let i = 0;
+while(i < 10) {
+    i++
+    console.log(`Estou aparecendo pela ${++contagem} vez`)
+}
+
+Do/While
+
+let contagem = 0;
+let i = 0;
+do { console.log(`Estou aparecendo pela ${++contagem} vez` )
+    i ++ }
+while (i < 10)
+
+For
+
+let contagem = 0;
+for (let i = 0; i< 10; ++i + 1) {
+    
+    console.log(`Estou aparecendo pela ${++contagem} vez`)
+}
+
+3)
+
+let contagem = 11;
+
+for (let i = 10; i > 0; --i) {
+    console.log(--contagem)
+} console.log("Fim")
+
+4)
+
+for (let i = 3; i > 0; --i) {
+    let info = +prompt("Insira um valor")
+    let info2 = +prompt("Insira um valor") 
+    let valor = info - info2
+    
+    console.log(`${info} - ${info2} = ${valor}`)       
+}
+
+5)
+
+let numero = 0;
+for (let i = 100; i > 0; --i) {
+    numero += 1000;
+    let valor = numero
+
+    console.log(`${valor}`)       
+}
+
+6) 
+<script>
+        
+    let valores = 0
+    let media = 0
+    for (let i = 0; i < 5; i ++) {
+        
+        let numeros = +prompt("Insira um valor")    
+        valores += numeros
+        media = valores/5
+        
+    }
+    console.log(`Soma: ${valores.toFixed(2)}`)
+    console.log(`Média: ${media}`)
+
+</script>
+
+7)
+
+<script> 
+    let numero = +prompt("Digite aqui um valor")
+    for (let i = 0; i <= numero; i ++) {
+    
+        if (i % 2 != 0 ) {
+        console.log(i)
+        }
+    }
+</script>
+
+8)
+
+<script>
+    
+    let numero = +prompt("Digite aqui um valor")
+    for (let i = 1; i <= 10; i ++) {
+
+        let teste = numero * i
+        console.log(teste)
+    }
+</script>
+
+9) 
+<script>
+    var qtdNegativos = 0
+    for (let i = 0; i < 5; i ++) {
+        
+        let a = +prompt("Insira um valor")    
+        if (a < 0) {
+            qtdNegativos++
+        }
+    }
+    
+    console.log(qtdNegativos)
+</script>
+
+10)
+
+<script>
+    let qtdPares = 0;
+    let qtdImpares = 0;
+
+    for (let i = 0; i < 10; i ++) {
+        let a = +prompt("Insira um valor")
+        if (a % 2 == 0) {
+            qtdPares++
+        } else {
+            qtdImpares++
+        }
+    }
+        
+    console.log(`Pares: ${qtdPares}`)
+    console.log(`Impares: ${qtdImpares}`)
+</script>
+
+11)
+
+<script>
+    let dentro = 0
+    let fora = 0
+
+    while(true) {
+        let a = +prompt("Insira um número")
+        if (a < 0) {
+            break }
+        if (10 < a && a < 20) {
+            dentro++ }
+        else { 
+            fora++ }
+    }
+    console.log(`${dentro} números estão no intervalo`)
+    console.log(`${fora} números estão fora do intervalo`)
+</script>
+
+12)
+
+<script>
+    let media = 0
+    let qtd = 0
+    while(true) {
+        let a = +prompt("Insira um número")
+        if (a < 0) {
+            break }
+
+        qtd++
+        media += a
+        calculo = media / qtd  
+    }
+    console.log(calculo)
+</script>
+
+13)
+
+<script>
+    for (let i = 1; i <= 15; i++) {
+        numero = 7
+        let amostra = numero * i
+        console.log(amostra)
+    }
+</script>
+
+14)
+
+<script>
+    let numero = +prompt("Digite aqui um valor")
+    let final = numero
+    for (let i = numero - 1; i > 0; i--) {
+        final *= i
+    }
+    console.log(final)
+</script>
+
+15)
+
+<script>
+    let salarioMedia = 0
+    let filhosMedia = 0
+    let salarioMaior = 0
+    let contagem = 0
+
+    while (true) {
+        let info = +(prompt("Insira o seu salário:"))
+        let info2 = +prompt("Insira quantos filhos você tem:")
+    
+        if (info < 0) {
+            break
+        }
+        contagem++
+        if (info > salarioMaior) {
+            salarioMaior = info
+        }
+        
+        salarioMedia += info
+        filhosMedia += info2
+    }
+    console.log(`Média salarial: ${(salarioMedia / contagem).toFixed(2)}`)
+    console.log(`Média de filhos: ${(filhosMedia / contagem).toFixed(2)}`)
+    console.log(`Maior salário: ${salarioMaior.toFixed(2)}`)
+</script>
+
+16)
+
+<script>
+    let valorMaior = 0
+    let valorMenor = 0
+
+    for(let i = 0; i < 5; i++) {
+        let numero = +prompt("Insira um valor:")
+
+        if (numero > valorMaior) {
+            valorMaior = numero
+            valorMenor = numero
+        }
+        if (numero < valorMenor) {
+            valorMenor = numero
+        }
+    }
+    console.log(`O menor valor digitado foi: ${valorMenor}`)
+    console.log(`O maior valor digitado foi: ${valorMaior}`)
+</script>
+
+17)
+
+
+
+18)
+
+
+
+19)
+
+
+
+20)
+
+
+
+21)
+
+

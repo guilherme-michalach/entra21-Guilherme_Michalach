@@ -7,38 +7,43 @@
 </head>
 <body>
     <script>
-        var notasInseridas = Number(prompt("ah"))
-        var atual = notasInseridas;
+        let primos = 0
 
-var notas100 = parseInt( atual / 100 );
-atual -= notas100 * 100;
+        for (let i = 0; i < 20; i++) {
 
-var notas50 = parseInt( atual / 50 );
-atual -= notas50 * 50;
-
-var notas20 = parseInt( atual / 20 );
-atual -= notas20 * 20;
-
-var notas10 = parseInt( atual / 10 );
-atual -= notas10 * 10;
-
-var notas5 = parseInt( atual / 5 );
-atual -= notas5 * 5;
-
-var notas2 = parseInt( atual / 2 );
-atual -= notas2 * 2;
-
-var notas1 = parseInt( atual );
-
-/* Print */
-console.log( notasInseridas );
-console.log( notas100 + " nota(s) de R$ 100,00" );
-console.log( notas50 + " nota(s) de R$ 50,00" );
-console.log( notas20 + " nota(s) de R$ 20,00" );
-console.log( notas10 + " nota(s) de R$ 10,00" );
-console.log( notas5 + " nota(s) de R$ 5,00" );
-console.log( notas2 + " nota(s) de R$ 2,00" );
-console.log( notas1 + " nota(s) de R$ 1,00" );
+            let media = +prompt(`Insira a média do aluno ${teste}:`)
+            teste++
+            if (0 >= media || media < 5) {
+            aluno1 = "Conceito D"
+            }
+        }
+        console.log (teste)
     </script>
 </body>
 </html>
+
+<!-- <script>
+    let qtdPares = 0;
+    let qtdImpares = 0;
+
+    for (let i = 0; i < 10; i ++) {
+        let a = +prompt("Insira um valor")
+        if (a % 2 == 0) {
+            qtdPares++
+        } else {
+            qtdImpares++
+        }
+    }
+        
+    console.log(`Pares: ${qtdPares}`)
+    console.log(`Impares: ${qtdImpares}`)
+</script> -->
+<!-- <script> 
+    let numero = +prompt("Digite aqui um valor")
+    for (let i = 0; i <= numero; i ++) {
+    
+        if (i % 2 != 0 ) {
+        console.log(i)
+        }
+    }
+</script> -->
