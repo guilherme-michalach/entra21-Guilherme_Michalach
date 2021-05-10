@@ -7,17 +7,23 @@
 </head>
 <body>
     <script>
-        let primos = 0
-
-        for (let i = 0; i < 20; i++) {
+        let aluno1 = ""
+        let teste = 1
+        for (let i = 1; i < 4; i++) {
 
             let media = +prompt(`Insira a média do aluno ${teste}:`)
             teste++
             if (0 >= media || media < 5) {
             aluno1 = "Conceito D"
+            } else if (media >= 5 || media < 7) {
+            aluno1 = "Conceito C" 
+            } else if (media >= 7 || media < 9) {
+            aluno1 = "Conceito B" 
+            } else if (media >= 9 || media <= 10) {
+            aluno1 = "Conceito A" 
             }
         }
-        console.log (teste)
+        console.log (aluno1)
     </script>
 </body>
 </html>

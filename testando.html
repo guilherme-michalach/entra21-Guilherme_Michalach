@@ -16,29 +16,27 @@ let votosJoao = 0
 let votosNulo = 0
 let votosBranco = 0
 
+alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
 
 while (true) {
-    alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
     let voto = +prompt("Digite seu voto")
     teste = voto
     if (teste < 1) {
         break 
     }
-    if (voto = 1) {
+    if (teste === 1) {
         votosJose++
-    } if (voto = 2) {
+    } if (teste === 2) {
         votosMaria++
-    } if (voto = 3) {
+    } if (voto === 3) {
         votosJoao++
-    } if (voto = 4) {
+    } if (voto === 4) {
         votosNulo++
-    } if (voto = 5) {
+    } if (voto === 5) {
         votosBranco++
     }
-    
+    console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
 }
-console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
-
     </script>
 </body>
 </html>
