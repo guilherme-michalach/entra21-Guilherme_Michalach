@@ -261,9 +261,26 @@ for (let i = 100; i > 0; --i) {
 
 
 
-19)
+19) Tem que corrigir o problema do prompt do aluno
 
+<script>
+    let media = 0
+    while (true) {
+        let aluno = +prompt("Insira o código do aluno:")
 
+        if (aluno < 1) {
+            break
+        }
+
+        let nota1 = +prompt("Insira a primeira nota do aluno:")
+        let nota2 = +prompt("Insira a segunda nota do aluno:")
+        let nota3 = +prompt("Insira a terceira nota do aluno:")
+
+        
+        media = (nota1 + nota2 + nota3) / 3
+        console.log(`A média do aluno com a matrícula ${aluno} é: ${media.toFixed(2)}`)
+    }
+</script>
 
 20)
 
