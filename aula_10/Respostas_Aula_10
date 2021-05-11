@@ -75,192 +75,192 @@ for (let i = 100; i > 0; --i) {
 
 6) 
         
-    let valores = 0
-    let media = 0
-    for (let i = 0; i < 5; i ++) {
-        
-        let numeros = +prompt("Insira um valor")    
-        valores += numeros
-        media = valores/5
-        
-    }
-    console.log(`Soma: ${valores.toFixed(2)}`)
-    console.log(`Média: ${media}`)
+let valores = 0
+let media = 0
+for (let i = 0; i < 5; i ++) {
+    
+    let numeros = +prompt("Insira um valor")    
+    valores += numeros
+    media = valores/5
+    
+}
+console.log(`Soma: ${valores.toFixed(2)}`)
+console.log(`Média: ${media}`)
 
 
 7)
 
-    let numero = +prompt("Digite aqui um valor")
-    for (let i = 0; i <= numero; i ++) {
-    
-        if (i % 2 != 0 ) {
-        console.log(i)
-        }
+let numero = +prompt("Digite aqui um valor")
+for (let i = 0; i <= numero; i ++) {
+
+    if (i % 2 != 0 ) {
+    console.log(i)
     }
+}
 
 8)
     
-    let numero = +prompt("Digite aqui um valor")
-    for (let i = 1; i <= 10; i ++) {
+let numero = +prompt("Digite aqui um valor")
+for (let i = 1; i <= 10; i ++) {
 
-        let teste = numero * i
-        console.log(teste)
-    }
+    let teste = numero * i
+    console.log(teste)
+}
 
 9) 
 
-    var qtdNegativos = 0
-    for (let i = 0; i < 5; i ++) {
-        
-        let a = +prompt("Insira um valor")    
-        if (a < 0) {
-            qtdNegativos++
-        }
-    }
+let qtdNegativos = 0
+for (let i = 0; i < 5; i ++) {
     
-    console.log(qtdNegativos)
+    let a = +prompt("Insira um valor")    
+    if (a < 0) {
+        qtdNegativos++
+    }
+}
+
+console.log(qtdNegativos)
 
 10)
 
-    let qtdPares = 0;
-    let qtdImpares = 0;
+let qtdPares = 0;
+let qtdImpares = 0;
 
-    for (let i = 0; i < 10; i ++) {
-        let a = +prompt("Insira um valor")
-        if (a % 2 == 0) {
-            qtdPares++
-        } else {
-            qtdImpares++
-        }
+for (let i = 0; i < 10; i ++) {
+    let a = +prompt("Insira um valor")
+    if (a % 2 == 0) {
+        qtdPares++
+    } else {
+        qtdImpares++
     }
-        
-    console.log(`Pares: ${qtdPares}`)
-    console.log(`Impares: ${qtdImpares}`)
+}
+    
+console.log(`Pares: ${qtdPares}`)
+console.log(`Impares: ${qtdImpares}`)
 
 11)
 
-    let dentro = 0
-    let fora = 0
+let dentro = 0
+let fora = 0
 
-    while(true) {
-        let a = +prompt("Insira um número")
-        if (a < 0) {
-            break }
-        if (10 < a && a < 20) {
-            dentro++ }
-        else { 
-            fora++ }
-    }
-    console.log(`${dentro} números estão no intervalo`)
-    console.log(`${fora} números estão fora do intervalo`)
+while(true) {
+    let a = +prompt("Insira um número")
+    if (a < 0) {
+        break }
+    if (10 < a && a < 20) {
+        dentro++ }
+    else { 
+        fora++ }
+}
+console.log(`${dentro} números estão no intervalo`)
+console.log(`${fora} números estão fora do intervalo`)
 
 12)
 
-    let media = 0
-    let qtd = 0
-    while(true) {
-        let a = +prompt("Insira um número")
-        if (a < 0) {
-            break }
+let media = 0
+let qtd = 0
+while(true) {
+    let a = +prompt("Insira um número")
+    if (a < 0) {
+        break }
 
-        qtd++
-        media += a
-        calculo = media / qtd  
-    }
-    console.log(calculo)
+    qtd++
+    media += a
+    calculo = media / qtd  
+}
+console.log(calculo)
 
 13)
 
-    for (let i = 1; i <= 15; i++) {
-        numero = 7
-        let amostra = numero * i
-        console.log(amostra)
-    }
+for (let i = 1; i <= 15; i++) {
+    numero = 7
+    let amostra = numero * i
+    console.log(amostra)
+}
 
 14)
 
-    let numero = +prompt("Digite aqui um valor")
-    let final = numero
-    for (let i = numero - 1; i > 0; i--) {
-        final *= i
-    }
-    console.log(final)
+let numero = +prompt("Digite aqui um valor")
+let final = numero
+for (let i = numero - 1; i > 0; i--) {
+    final *= i
+}
+console.log(final)
 
 15)
 
-    let salarioMedia = 0
-    let filhosMedia = 0
-    let salarioMaior = 0
-    let contagem = 0
+let salarioMedia = 0
+let filhosMedia = 0
+let salarioMaior = 0
+let contagem = 0
 
-    while (true) {
-        let info = +(prompt("Insira o seu salário:"))
-        let info2 = +prompt("Insira quantos filhos você tem:")
-    
-        if (info < 0) {
-            break
-        }
-        contagem++
-        if (info > salarioMaior) {
-            salarioMaior = info
-        }
-        
-        salarioMedia += info
-        filhosMedia += info2
+while (true) {
+    let info = +(prompt("Insira o seu salário:"))
+    let info2 = +prompt("Insira quantos filhos você tem:")
+
+    if (info < 0) {
+        break
     }
-    console.log(`Média salarial: ${(salarioMedia / contagem).toFixed(2)}`)
-    console.log(`Média de filhos: ${(filhosMedia / contagem).toFixed(2)}`)
-    console.log(`Maior salário: ${salarioMaior.toFixed(2)}`)
+    contagem++
+    if (info > salarioMaior) {
+        salarioMaior = info
+    }
+    
+    salarioMedia += info
+    filhosMedia += info2
+}
+console.log(`Média salarial: ${(salarioMedia / contagem).toFixed(2)}`)
+console.log(`Média de filhos: ${(filhosMedia / contagem).toFixed(2)}`)
+console.log(`Maior salário: ${salarioMaior.toFixed(2)}`)
 
 16)
 
-    let valorMaior = 0
-    let valorMenor = 0
+let valorMaior = 0
+let valorMenor = 0
 
-    for(let i = 0; i < 5; i++) {
-        let numero = +prompt("Insira um valor:")
+for(let i = 0; i < 5; i++) {
+    let numero = +prompt("Insira um valor:")
 
-        if (numero > valorMaior) {
-            valorMaior = numero
-            valorMenor = numero
-        }
-        if (numero < valorMenor) {
-            valorMenor = numero
-        }
+    if (numero > valorMaior) {
+        valorMaior = numero
+        valorMenor = numero
     }
-    console.log(`O menor valor digitado foi: ${valorMenor}`)
-    console.log(`O maior valor digitado foi: ${valorMaior}`)
+    if (numero < valorMenor) {
+        valorMenor = numero
+    }
+}
+console.log(`O menor valor digitado foi: ${valorMenor}`)
+console.log(`O maior valor digitado foi: ${valorMaior}`)
 
 17)
        
-    let totalVotos = 0
-    let votosJose = 0
-    let votosMaria = 0
-    let votosJoao = 0
-    let votosNulo = 0
-    let votosBranco = 0
+let totalVotos = 0
+let votosJose = 0
+let votosMaria = 0
+let votosJoao = 0
+let votosNulo = 0
+let votosBranco = 0
 
-    alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
+alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
 
-    while (true) {
-        let voto = +prompt("Digite seu voto")
-        teste = voto
-        if (teste < 1) {
-            break 
-        }
-        if (teste === 1) {
-            votosJose++
-        } if (teste === 2) {
-            votosMaria++
-        } if (voto === 3) {
-            votosJoao++
-        } if (voto === 4) {
-            votosNulo++
-        } if (voto === 5) {
-            votosBranco++
-        }
-        console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
+while (true) {
+    let voto = +prompt("Digite seu voto")
+    teste = voto
+    if (teste < 1) {
+        break 
     }
+    if (teste === 1) {
+        votosJose++
+    } if (teste === 2) {
+        votosMaria++
+    } if (voto === 3) {
+        votosJoao++
+    } if (voto === 4) {
+        votosNulo++
+    } if (voto === 5) {
+        votosBranco++
+    }
+    console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
+}
 
 18)
 
@@ -282,22 +282,22 @@ for(aluno; aluno < 5; aluno++) {
 
 19) Tem que corrigir o problema do prompt do aluno
 
-    let media = 0
-    while (true) {
-        let aluno = +prompt("Insira o código do aluno:")
+let media = 0
+while (true) {
+    let aluno = +prompt("Insira o código do aluno:")
 
-        if (aluno < 1) {
-            break
-        }
-
-        let nota1 = +prompt("Insira a primeira nota do aluno:")
-        let nota2 = +prompt("Insira a segunda nota do aluno:")
-        let nota3 = +prompt("Insira a terceira nota do aluno:")
-
-        
-        media = (nota1 + nota2 + nota3) / 3
-        console.log(`A média do aluno com a matrícula ${aluno} é: ${media.toFixed(2)}`)
+    if (aluno < 1) {
+        break
     }
+
+    let nota1 = +prompt("Insira a primeira nota do aluno:")
+    let nota2 = +prompt("Insira a segunda nota do aluno:")
+    let nota3 = +prompt("Insira a terceira nota do aluno:")
+
+    
+    media = (nota1 + nota2 + nota3) / 3
+    console.log(`A média do aluno com a matrícula ${aluno} é: ${media.toFixed(2)}`)
+}
 
 20)
 
