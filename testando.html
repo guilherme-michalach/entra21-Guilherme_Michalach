@@ -8,25 +8,20 @@
 </head>
 <body>
     <script>
-        let divisor = 0
-        let valor = 0
-        let qtd = 0
 
-        for(teste = 0; teste < qtd; teste++) {
+        for(let limite = 2; limite < 72; limite++) {
 
+            let naoPrimo = false
             
-
-            for(let i = 0; i < valor; i++) {
-                
-                if (valor % i === 0) {
-                    ++divisor
-                }
-
-                if (i === 1) {
-                    console.log(valor)
+            for(let i = 2; i <= limite; i++) {
+                if(limite % i === 0 && i != limite) {
+                    naoPrimo = true
                 }
             }
-    }
+            if (naoPrimo === false) {
+                console.log(limite)
+            }
+        }
     </script>
 </body>
 </html>
