@@ -289,7 +289,21 @@ for (let i = 100; i > 0; --i) {
 
 18)
 
+let aluno = 1
 
+for(aluno; aluno < 5; aluno++) {
+
+    let conceito = +prompt("Insira a nota do aluno:")
+    if (0 <= conceito && conceito < 5) {
+        console.log(`Aluno ${aluno}: Conceito D`)
+    } else if (5 <= conceito && conceito < 7) {
+        console.log(`Aluno ${aluno}: Conceito C`)
+    } else if (7 <= conceito && conceito < 9) {
+        console.log(`Aluno ${aluno}: Conceito B`)
+    } else if (9 <= conceito && conceito <= 10) {
+        console.log(`Aluno ${aluno}: Conceito A`)
+    }
+}
 
 19) Tem que corrigir o problema do prompt do aluno
 
@@ -332,5 +346,13 @@ console.log(`Soma dos pares: ${soma}`)
 console.log(`Multiplicação dos ímpares: ${multi}`)
 
 21)
+Corrgir o problema dela
+for(let i = 2; i < 72; i++) {
 
-
+    if (i === 2 || i === 3 || i === 5) {
+        console.log(i)
+    }
+    if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0) {
+        console.log(i)
+    } 
+}

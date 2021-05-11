@@ -7,22 +7,21 @@
 </head>
 <body>
     <script>
+        let aluno = 1
 
-        let nome = prompt("Escreva o nome do vendedor")
-        let vendasJoao = parseFloat(1230.30)
-        let vendasPedro = parseFloat(0)
-        let salario_fixo = 0
-    
-        if(nome=="JOAO") {
-            salario_fixo = parseInt(500) + (0.15 *vendasJoao) 
-        } else if(nome=="PEDRO") {
-            salario_fixo = parseInt(700) + (0.15 *vendasPedro) 
-        } 
-    
-        let salario_total = salario_fixo
-    
-        console.log(salario_total.toFixed(2))
-    
+        for(aluno; aluno < 5; aluno++) {
+
+            let conceito = +prompt("Insira a nota do aluno:")
+            if (0 <= conceito && conceito < 5) {
+                console.log(`Aluno ${aluno}: Conceito D`)
+            } else if (5 <= conceito && conceito < 7) {
+                console.log(`Aluno ${aluno}: Conceito C`)
+            } else if (7 <= conceito && conceito < 9) {
+                console.log(`Aluno ${aluno}: Conceito B`)
+            } else if (9 <= conceito && conceito <= 10) {
+                console.log(`Aluno ${aluno}: Conceito A`)
+            }
+        }
     </script>
 </body>
 </html>
