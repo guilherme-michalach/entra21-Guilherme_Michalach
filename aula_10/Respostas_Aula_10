@@ -127,10 +127,10 @@ let qtdImpares = 0;
 
 for (let i = 0; i < 10; i ++) {
     let a = +prompt("Insira um valor")
-    if (a % 2 == 0) {
-        qtdPares++
-    } else {
+    if (a < 0) {
         qtdImpares++
+    } else {
+        qtdPares++
     }
 }
     
