@@ -235,26 +235,21 @@ for (let i = 0; i < 5; i++) {
 console.log(`O menor valor digitado foi: ${valorMenor}`)
 console.log(`O maior valor digitado foi: ${valorMaior}`)
 
-17)
-       
-let totalVotos = 0
+17)  
 let votosJose = 0
 let votosMaria = 0
 let votosJoao = 0
 let votosNulo = 0
 let votosBranco = 0
 
-alert("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
-
 while (true) {
-    let voto = +prompt("Digite seu voto")
-    teste = voto
-    if (teste < 1) {
+    let voto = +prompt("1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco\nDigite seu voto")
+    if (voto < 1) {
         break 
     }
-    if (teste === 1) {
+    if (voto === 1) {
         votosJose++
-    } if (teste === 2) {
+    } if (voto === 2) {
         votosMaria++
     } if (voto === 3) {
         votosJoao++
@@ -263,8 +258,9 @@ while (true) {
     } if (voto === 5) {
         votosBranco++
     }
-    console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
 }
+console.log(`Total de Votos\nJosé Bolinha: ${votosJose} voto(s)\nMaria Nascimento: ${votosMaria} voto(s)\nJoão da Silva: ${votosJoao} voto(s)\nVotos nulos: ${votosNulo} voto(s)\nVotos em branco: ${votosBranco} voto(s)`)
+
 
 18)
 
