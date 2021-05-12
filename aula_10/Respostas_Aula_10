@@ -146,7 +146,7 @@ while (true) {
     let a = +prompt("Insira um número")
     if (a < 0) {
         break }
-    if (10 < a && a < 20) {
+    if (10 <= a && a <= 20) {
         dentro++ }
     else { 
         fora++ }
