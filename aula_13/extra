@@ -1,0 +1,20 @@
+1 - 
+let teste = []
+let qtdPares = 0
+
+for (let i = 0; i < 10; i++) {
+    teste[i] = +prompt(`Digite o ${i+1}° valor`)
+    //vetor.push também é possível
+
+    if (teste[i] % 2 === 0) {
+        qtdPares++
+    }
+}
+
+for (let i = 0, tamanhoVetor = teste.length; i < tamanhoVetor; i++){
+    if (teste[i] % 2 === 0) {
+        qtdPares++
+        console.log(teste[i])
+    }
+}
+console.log(`O vetor possui ${qtdPares} número(s) pares.`)

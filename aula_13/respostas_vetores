@@ -1,0 +1,62 @@
+1)
+
+let teste = []
+let qtdPares = 0
+
+for (let i = 0; i < 10; i++) {
+    teste[i] = +prompt(`Digite o ${i+1}° valor`)
+
+    if (teste[i] % 2 === 0) {
+        qtdPares++
+    }
+}
+
+console.log(`O vetor possui ${qtdPares} número(s) pares.`)
+
+
+2)
+
+let teste = []
+let maior = 0
+
+for (let i = 0; i < 5; i++) {
+    teste[i] = +prompt(`Digite o ${i+1}° valor`)
+
+    if (teste[i] > maior) {
+        maior = teste[i]
+    }
+}
+
+console.log(`Números do vetor: ${teste}`)
+console.log(`Maior número do vetor: ${maior}`)
+console.log(`Posição do maior número do vetor: ${teste.lastIndexOf(maior)}`)
+
+//pensar no caso de negativos
+3)
+
+let teste = []
+let maior = 0
+let menor = 0
+
+for (let i = 0; i < 5; i++) {
+    teste[i] = +prompt(`Digite o ${i+1}° valor`)
+
+    if (teste[i] > maior) {
+        maior = teste[i]
+        menor = teste[0]
+    }
+    if (teste[i] < menor) {
+        menor = teste[i]
+    }
+}
+
+console.log(`Maior número do vetor: ${maior}`)
+console.log(`Menor número do vetor: ${menor}`)
+
+
+4)
+
+
+
+5)
+

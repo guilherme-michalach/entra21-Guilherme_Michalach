@@ -7,32 +7,26 @@
 </head>
 <body>
     <script>
-        let aluno = 1
+let teste = []
+let maior = 0
 
-        for(aluno; aluno < 5; aluno++) {
+for (let i = 0; i < 5; i++) {
+    teste[i] = +prompt(`Digite o ${i+1}° valor`)
 
-            let conceito = +prompt("Insira a nota do aluno:")
-            if (0 <= conceito && conceito < 5) {
-                console.log(`Aluno ${aluno}: Conceito D`)
-            } else if (5 <= conceito && conceito < 7) {
-                console.log(`Aluno ${aluno}: Conceito C`)
-            } else if (7 <= conceito && conceito < 9) {
-                console.log(`Aluno ${aluno}: Conceito B`)
-            } else if (9 <= conceito && conceito <= 10) {
-                console.log(`Aluno ${aluno}: Conceito A`)
-            }
-        }
+    if (teste[i] > maior) {
+        maior = teste[i]
+    }
+
+   
+
+
+}
+
+console.log(`Números do vetor: ${teste}`)
+console.log(`Maior número do vetor: ${maior}`)
+console.log(`Posição do maior número do vetor: ${teste.lastIndexOf(maior)}`)
+
+
     </script>
 </body>
 </html>
-<!-- 
-Corrigir o problema dela
-for(let i = 2; i < 72; i++) {
-
-    if (i === 2 || i === 3 || i === 5) {
-        console.log(i)
-    }
-    if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0) {
-        console.log(i)
-    } 
-} -->

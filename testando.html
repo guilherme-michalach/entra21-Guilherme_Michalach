@@ -8,25 +8,27 @@
 </head>
 <body>
     <script>
+        let intervalo1 = 0
+        let intervalo2 = 0
+        let intervalo3 = 0
 
-        for(let limite = 2; limite < 72; limite++) {
+        while(true) {
+            let numeros = +prompt("Insira um número:")
 
-            let naoPrimo = false
-            
-            for(let i = 2; i <= limite; i++) {
-                if(limite % i === 0 && i != limite) {
-                    naoPrimo = true
-                }
+            if (numeros < 0) {
+                break
             }
-            if (naoPrimo === false) {
-                console.log(limite)
+            if (numeros >= 0 && numeros <= 25) {
+                intervalo1 ++
+            } else if(numeros >= 26 && numeros <= 50) {
+                intervalo2 ++
+            } else if(numeros >= 51 && numeros <= 75) {
+                intervalo3 ++
             }
         }
+        console.log(`Quantidade de números no intervalo [0-25]: ${intervalo1}`)
+        console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
+        console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
     </script>
 </body>
 </html>
-<!-- for (let i = 0; i < 72; i++) {
-    if (i % 2 != 0) {
-        console.log(i)
-    }
-} -->
