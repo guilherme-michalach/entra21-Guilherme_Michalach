@@ -154,6 +154,8 @@ while (true) {
 console.log(`${dentro} números estão no intervalo`)
 console.log(`${fora} números estão fora do intervalo`)
 
+//Ou usar o ternário no lugar do segundo if com o else
+
 12)
 
 let media = 0
@@ -167,15 +169,15 @@ while (true) {
     media += a
     calculo = media / qtd  
 }
-console.log(calculo)
+console.log(calculo.toFixed(2))
 
 13)
 
 for (let i = 1; i <= 15; i++) {
-    numero = 7
-    let amostra = numero * i
-    console.log(amostra)
+    let result += `${7 * i}`
+    
 }
+console.log(result)
 
 14)
 
@@ -195,11 +197,13 @@ let contagem = 0
 
 while (true) {
     let info = +(prompt("Insira o seu salário:"))
-    let info2 = +prompt("Insira quantos filhos você tem:")
-
+    
     if (info < 0) {
         break
     }
+
+    let info2 = +prompt("Insira quantos filhos você tem:")
+
     contagem++
     if (info > salarioMaior) {
         salarioMaior = info
@@ -319,8 +323,8 @@ console.log(`Soma dos pares: ${soma}`)
 console.log(`Multiplicação dos ímpares: ${multi}`)
 
 21)
-
-for (let limite = 2; limite < 72; limite++) {
+let max = 0
+for (let limite = 2; max < 20; limite++) {
 
     let naoPrimo = false
     
@@ -331,6 +335,7 @@ for (let limite = 2; limite < 72; limite++) {
     }
     if (naoPrimo === false) {
         console.log(limite)
+        max++
     }
 }
 
