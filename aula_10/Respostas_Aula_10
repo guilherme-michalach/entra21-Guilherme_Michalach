@@ -104,7 +104,7 @@ let numero = +prompt("Digite aqui um valor")
 for (let i = 1; i <= 10; i ++) {
 
     let teste = numero * i
-    console.log(teste)
+    console.log(`${numero} x ${i} = ${teste}`)
 }
 
 9) 
@@ -127,7 +127,7 @@ let qtdImpares = 0;
 
 for (let i = 0; i < 10; i ++) {
     let a = +prompt("Insira um valor")
-    if (a < 0) {
+    if (a % 2 != 0) {
         qtdImpares++
     } else {
         qtdPares++
@@ -142,7 +142,7 @@ console.log(`Impares: ${qtdImpares}`)
 let dentro = 0
 let fora = 0
 
-while(true) {
+while (true) {
     let a = +prompt("Insira um número")
     if (a < 0) {
         break }
@@ -158,7 +158,7 @@ console.log(`${fora} números estão fora do intervalo`)
 
 let media = 0
 let qtd = 0
-while(true) {
+while (true) {
     let a = +prompt("Insira um número")
     if (a < 0) {
         break }
@@ -217,7 +217,7 @@ console.log(`Maior salário: ${salarioMaior.toFixed(2)}`)
 let valorMaior = 0
 let valorMenor = 0
 
-for(let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
     let numero = +prompt("Insira um valor:")
 
     if (numero > valorMaior) {
@@ -266,7 +266,7 @@ while (true) {
 
 let aluno = 1
 
-for(aluno; aluno < 5; aluno++) {
+for (aluno; aluno < 5; aluno++) {
 
     let conceito = +prompt("Insira a nota do aluno:")
     if (0 <= conceito && conceito < 5) {
@@ -320,11 +320,11 @@ console.log(`Multiplicação dos ímpares: ${multi}`)
 
 21)
 
-for(let limite = 2; limite < 72; limite++) {
+for (let limite = 2; limite < 72; limite++) {
 
     let naoPrimo = false
     
-    for(let i = 2; i <= limite; i++) {
+    for (let i = 2; i <= limite; i++) {
         if(limite % i === 0 && i != limite) {
             naoPrimo = true
         }
@@ -334,3 +334,32 @@ for(let limite = 2; limite < 72; limite++) {
     }
 }
 
+Desafio
+
+1)
+
+2)
+
+3)
+
+let intervalo1 = 0
+let intervalo2 = 0
+let intervalo3 = 0
+
+while (true) {
+    let numeros = +prompt("Insira um número:")
+
+    if (numeros < 0) {
+        break
+    }
+    if (numeros >= 0 && numeros <= 25) {
+        intervalo1 ++
+    } else if(numeros >= 26 && numeros <= 50) {
+        intervalo2 ++
+    } else if(numeros >= 51 && numeros <= 75) {
+        intervalo3 ++
+    }
+}
+console.log(`Quantidade de números no intervalo [0-25]: ${intervalo1}`)
+console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
+console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
