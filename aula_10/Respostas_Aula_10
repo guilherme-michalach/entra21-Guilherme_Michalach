@@ -382,6 +382,28 @@ console.log(teste)
 
 2)
 
+let numero = +prompt("Insira um número positivo")
+let proximo = 0
+let anterior = 0
+let amostra = 0
+for(let i = 0; i < numero; ++i) {
+
+    amostra = proximo + anterior
+    anterior = proximo
+    proximo = amostra
+
+    if (numero < 0) {
+        break
+    }
+    if (proximo === 0) {
+        proximo++
+    }
+    console.log(amostra)
+}
+
+Ou
+
+
 3)
 
 let intervalo1 = 0
