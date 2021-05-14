@@ -370,6 +370,16 @@ Desafio
 
 1)
 
+let base = +prompt("Digite aqui sua base:")
+let expoente = +prompt("Digite aqui seu expoente:")
+let teste = 1
+
+for (let i = 0; i < expoente; i++) {
+    teste *= base
+}
+
+console.log(teste)
+
 2)
 
 3)
@@ -395,3 +405,6 @@ while (true) {
 console.log(`Quantidade de números no intervalo [0-25]: ${intervalo1}`)
 console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
 console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
+
+4)
+

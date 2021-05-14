@@ -56,7 +56,28 @@ console.log(`Menor número do vetor: ${menor}`)
 
 4)
 
+let vetor1 = []
+let vetor2 = []
+let teste = 4
 
+for (let i = 0; i < 5; i++) {
+
+    vetor1[i] = +prompt(`Informe o ${i + 1}° valor:`)
+    vetor2[teste] = vetor1[i]
+    teste--
+}
+
+console.log(vetor1, vetor2)
 
 5)
 
+let nomes = ["Guilherme", "William", "Francesco", "Arthur", "Felipe"]
+let info = prompt("Digite um nome")
+
+if (nomes.indexOf(info) != -1) {
+    console.log("Achei")
+} else {
+    console.log("Não achei")
+}
+
+//Tentar algo com booleans depois
