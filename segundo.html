@@ -7,26 +7,20 @@
 </head>
 <body>
     <script>
-let teste = []
-let maior = 0
 
-for (let i = 0; i < 5; i++) {
-    teste[i] = +prompt(`Digite o ${i+1}° valor`)
-
-    if (teste[i] > maior) {
-        maior = teste[i]
-    }
-
-   
-
-
-}
-
-console.log(`Números do vetor: ${teste}`)
-console.log(`Maior número do vetor: ${maior}`)
-console.log(`Posição do maior número do vetor: ${teste.lastIndexOf(maior)}`)
-
-
+let vetor = []
+        let x = +prompt("Insira um valor")
+        let y = +prompt("Insira um valor")
+        let teste = 0
+        let teste1 = 0
+        
+        for(let i = 0; i < 8; i++) {
+            vetor[i] = +prompt("Insira um número:")
+            
+        }
+        console.log(vetor)
+        console.log(teste)
+        console.log(teste1)
     </script>
 </body>
 </html>

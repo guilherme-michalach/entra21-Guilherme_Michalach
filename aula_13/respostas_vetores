@@ -70,7 +70,6 @@ for (let i = 0; i < 5; i++) {
 console.log(vetor1, vetor2)
 
 5)
-5 não tá funcionando
 
 let nomes = ["Guilherme", "William", "Francesco", "Arthur", "Felipe"]
 let info = prompt("Digite um nome")
@@ -82,3 +81,108 @@ if (nomes.indexOf(info) != -1) {
 }
 
 //Tentar algo com booleans depois
+
+6)
+
+let vetorA = [1, 0, 5, -2, -5, 7]
+let soma3 = vetorA[0] + vetorA[1] + vetorA[5]
+vetorA[4] = 100
+let amostra = ""
+for(let i = 0; i < 6; i++){
+    amostra += vetorA[i] + "\n"
+}
+console.log(amostra)
+// console.log(soma3)
+
+7)
+
+let vetor = []
+let vetorResult = []
+
+for(let i = 0; i < 5; i++) {
+    let numeros = +prompt("Insira um número")
+    vetor[i] = numeros
+    vetorResult[i] = vetor[i] * vetor[i]
+}
+console.log(vetor)
+console.log(vetorResult)
+
+8)
+
+let vetor = []
+let vetorReverso = []
+let inversor = 5
+
+for(let i = 0; i < 6; i++) {
+    vetor[i] = +prompt("Insira um número par:")
+    if(vetor[i] % 2 != 0) {
+        alert("Valor inválido!!!")
+        break
+    }
+    vetorReverso[inversor] = vetor[i]
+    inversor--
+}
+console.log(vetor)
+console.log(vetorReverso)
+
+Ou
+
+let vetor = []
+
+for(let i = 0; i < 6; i++) {
+    vetor[i] = +prompt("Insira um número par:")
+    if(vetor[i] % 2 != 0) {
+        alert("Valor inválido!!!")
+        break
+    }
+}
+console.log(vetor)
+console.log(vetor.reverse())
+
+9)
+
+let vetor = [];
+let contador = 0
+let verdadeiro = false
+
+for (let i = 0; i < 8; i++) {
+    vetor[i] = +prompt("Declare um número")
+}
+
+let x = +prompt("Número X")
+let y = +prompt("Número Y")
+
+for (let j = 0; j < 8; j++) {
+    if (x <= 7) {
+        vetor[x]
+    } else if (x < 0 || x > 8) {
+        x = +prompt("Número X")
+    }
+    if (y <= 7) {
+        vetor[y]
+    } else if (y < 0 || y > 8) {
+        y = +prompt("Número Y")
+    }
+} 
+
+console.log(vetor[x] + vetor[y])
+
+10)
+
+let vetor = [];
+let negativos = 0
+let soma = 0
+for (let i = 0; i < 10; i++) {
+    vetor[i] = +prompt("Insira um número")
+    if (vetor[i] < 0) {
+        negativos++
+    }
+    if (vetor[i] >= 0) {
+        soma += vetor[i]
+    }
+}
+console.log(`Foram digitados ${negativos} números negativos.`)
+console.log(`A soma dos valores positivos foi de: ${soma}`)
+
+11)
+

@@ -7,48 +7,20 @@
 </head>
 <body>
     <script>
-        let turno = prompt("Insira a letra inicial do turno em que você estuda")
-        
-        switch (turno) {
-            case "M":
-            console.log("Bom dia!")
-            break;
-
-            case "V":
-            console.log("Boa tarde!")
-            break;
-
-            case "N":
-            console.log("Boa noite!")
-            break;
-
-            case "m":
-            console.log("Bom dia!")
-            break;
-
-            case "v":
-            console.log("Boa tarde!")
-            break;
-
-            case "n":
-            console.log("Boa noite!")
-            break;
-
-            default:
-            console.log("Valor Inválido!")
-            break;
+        let vetor = [];
+        let negativos = 0
+        let soma = 0
+        for (let i = 0; i < 10; i++) {
+            vetor[i] = +prompt("Insira um número")
+            if (vetor[i] < 0) {
+                negativos++
+            }
+            if (vetor[i] >= 0) {
+                soma += vetor[i]
+            }
         }
+        console.log(`Foram digitados ${negativos} números negativos.`)
+        console.log(`A soma dos valores positivos foi de: ${soma}`)
     </script>
 </body>
 </html>
-<!-- 9) Reescreva o script abaixo utilizando o operador ternário:
-let resultado;
-Conferir se tem que fazer algo diferente
-
-if (a + b < 4) {
-    resultado = "Abaixo"
-} else {
-    resultado = "Acima"
-}
-18) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7 e
-imprima o dia da semana correspondente a este numero. Isto é, domingo se for 1, segunda-feira se for 2, e assim por diante. -->
