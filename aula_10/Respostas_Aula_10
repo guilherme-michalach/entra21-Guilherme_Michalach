@@ -73,6 +73,12 @@ for (let i = 100; i > 0; --i) {
     console.log(`${valor}`)       
 }
 
+Ou
+
+for(i = 0; i <= 100000; i += 1000){
+    console.log(i)
+}
+
 6) 
         
 let valores = 0
@@ -97,6 +103,31 @@ for (let i = 0; i <= numero; i ++) {
     console.log(i)
     }
 }
+Arrumar o console dessa forma aqui
+
+Formas corretas para mostrar no console
+
+// Forma 01
+let resultado = ""
+let numero = +prompt("Digite um número:")
+
+for (let i = 1; i <= numero; i += 2) {
+    resultado += i
+    if (i < numero - 1) resultado += ", "
+}
+
+alert(resultado)
+
+// Forma 02
+let numero = +prompt("Digite um número N:")
+let impar = ""
+
+for (let i = 0; i <= numero; ++i) {
+    if (i % 2 != 0) {
+        i == numero || i == numero - 1 ? impar += i : impar += `${i}, `
+    }
+}
+console.log(impar)
 
 8)
     
