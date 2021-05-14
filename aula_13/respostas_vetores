@@ -70,6 +70,7 @@ for (let i = 0; i < 5; i++) {
 console.log(vetor1, vetor2)
 
 5)
+5 não tá funcionando
 
 let nomes = ["Guilherme", "William", "Francesco", "Arthur", "Felipe"]
 let info = prompt("Digite um nome")
