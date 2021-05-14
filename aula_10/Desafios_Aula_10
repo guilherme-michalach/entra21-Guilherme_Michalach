@@ -1,0 +1,64 @@
+Desafio
+
+1)
+
+let base = +prompt("Digite aqui sua base:")
+let expoente = +prompt("Digite aqui seu expoente:")
+let teste = 1
+
+for (let i = 0; i < expoente; i++) {
+    teste *= base
+}
+
+console.log(teste)
+
+2)
+
+let numero = +prompt("Insira um número positivo")
+let proximo = 0
+let anterior = 0
+let amostra = 0
+for(let i = 0; i < numero; ++i) {
+
+    amostra = proximo + anterior
+    anterior = proximo
+    proximo = amostra
+
+    if (numero < 0) {
+        break
+    }
+    if (proximo === 0) {
+        proximo++
+    }
+    console.log(amostra)
+}
+
+Consertar problema do 1 1
+
+
+
+3)
+
+let intervalo1 = 0
+let intervalo2 = 0
+let intervalo3 = 0
+
+while (true) {
+    let numeros = +prompt("Insira um número:")
+
+    if (numeros < 0) {
+        break
+    }
+    if (numeros >= 0 && numeros <= 25) {
+        intervalo1 ++
+    } else if(numeros >= 26 && numeros <= 50) {
+        intervalo2 ++
+    } else if(numeros >= 51 && numeros <= 75) {
+        intervalo3 ++
+    }
+}
+console.log(`Quantidade de números no intervalo [0-25]: ${intervalo1}`)
+console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
+console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
+
+4)
