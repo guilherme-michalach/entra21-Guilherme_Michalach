@@ -303,3 +303,90 @@ bool ? console.log("Os valores de ambos vetores são iguais") : console.log("Os 
 15)
 
 
+
+16)
+
+
+
+17)
+
+
+
+18)
+
+let vetor = []
+let somaPares = 0
+let multiImpares = 1
+
+for(let i = 0; i < 10; i++) {
+    let valores = Math.floor(Math.random() * (11 - 1)) + 1
+    vetor[i] = valores
+
+    if(vetor[i] % 2 === 0) {
+        somaPares += vetor[i]
+    } else if(vetor[i] % 2 != 0) {
+        multiImpares *= vetor[i]
+    }
+}
+
+console.log(`Os valores presentes no vetor são: ${vetor}`)
+console.log(`A soma dos números pares do vetor é: ${somaPares}`)
+console.log(`A multiplicação dos números impares do vetor é: ${multiImpares}`)
+
+19)
+
+
+
+20)
+
+let vetor = []
+let mediaTurma = 0
+
+for(let i = 0; i < 10; i++) {
+    let notas = +prompt("Insira uma nota")
+    vetor[i] = notas
+
+    mediaTurma += vetor[i] 
+}
+
+let mediaFinal = mediaTurma / 10
+
+for(let i = 0; i < 10; i++) {
+    if(vetor[i] > mediaFinal) {
+        console.log(`A nota ${vetor[i].toFixed(2)} ficou acima da média!`)
+    }
+}
+
+21)
+
+let produtos = []
+let precos = []
+let qtdInferior50 = 0
+let mediaSuperior100 = 0
+let valor = 0
+let nomes = ""
+
+for(let i = 0; i < 5; i++) {
+    let produtosNome = prompt("Insira o nome do produto")
+    let precosProdutos = +prompt("Insira o valor do produto")
+
+    produtos[i] = produtosNome
+    precos[i] = precosProdutos
+
+    if(precos[i] < 50.00) {
+        qtdInferior50++
+    }
+
+    if(precos[i] >= 50.00 && precos[i] <= 100.00) {
+        nomes += produtosNome + "\n"
+    }
+
+    if(precos[i] > 100.00) {
+        mediaSuperior100 += precos[i]
+        valor = mediaSuperior100 / i
+    }
+}
+
+console.log(`A quantidade de produtos com valor inferior a R$ 50,00 foi de: ${qtdInferior50}`)
+console.log(`O nome dos produtos com preço entre R$ 50,00 e R$ 100,00 é: ${nomes}`)
+console.log(`A média de preço dos produtos com valor superior à R$ 100,00 foi: ${valor.toFixed(2)}`)
