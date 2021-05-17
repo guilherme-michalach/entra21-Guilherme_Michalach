@@ -7,20 +7,15 @@
 </head>
 <body>
     <script>
-
 let vetor = []
-        let x = +prompt("Insira um valor")
-        let y = +prompt("Insira um valor")
-        let teste = 0
-        let teste1 = 0
-        
-        for(let i = 0; i < 8; i++) {
-            vetor[i] = +prompt("Insira um número:")
-            
-        }
-        console.log(vetor)
-        console.log(teste)
-        console.log(teste1)
+let valorSubstituto = 0
+for(let i = 0; i < 10; i++) {
+    // let valores = Math.floor(Math.random() * (11 - 1)) + 1
+    let valores = +prompt("Insira um valor")
+    vetor[i] = valores
+}
+
+
     </script>
 </body>
 </html>
