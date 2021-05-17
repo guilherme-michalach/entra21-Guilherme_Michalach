@@ -300,7 +300,7 @@ for(let i = 0; i < 5; i++) {
 
 bool ? console.log("Os valores de ambos vetores são iguais") : console.log("Os valores de ambos vetores são diferentes")
 
-15)
+15) ARRUMAR CONSOLE
 
 
 
@@ -310,7 +310,33 @@ bool ? console.log("Os valores de ambos vetores são iguais") : console.log("Os 
 
 17)
 
+let vetor = []
+let valorSubstituto = 0
+for(let i = 0; i < 10; i++) {
+    let valores = Math.floor(Math.random() * (11 - 1)) + 1
+    vetor[i] = valores
+}
 
+for(let i = 0; i < 10; i++) {
+
+    if(vetor[i] > vetor[i + 1]) {
+        valorSubstituto = vetor[i]
+        vetor[i] = vetor[i + 1]
+        vetor[i + 1] = valorSubstituto
+    }
+
+    for(let i = 0; i < 10; i++) {
+        if(vetor[i] > vetor[i + 1]) {
+        valorSubstituto = vetor[i]
+        vetor[i] = vetor[i + 1]
+        vetor[i + 1] = valorSubstituto
+    }
+
+    }
+
+}
+
+console.log(vetor)
 
 18)
 
