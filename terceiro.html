@@ -8,60 +8,27 @@
 <body>
     <script>
 
-let dinheiro = Number(prompt("ah"));
-let notas = dinheiro;
+let vetor = []
+let vetor2 = []
+let vetor3 = []
 
-let cemConto = parseInt(notas / 100);
-notas -= cemConto * 100;
+for(let i = 0; i < 5; i++) {
+    let valorV1 = +prompt("Insira um valor")
+    vetor[i] = valorV1
+}
 
-let cinquentaConto = parseInt(notas / 50);
-notas -= cinquentaConto * 50;
+for(let i = 0; i < 5; i++) {
+    let valorV2 = +prompt("Insira um valor")
+    vetor2[i] = valorV2
+}
 
-let vinteConto = parseInt(notas / 20);
-notas -= vinteConto * 20;
+for(let i = 0; i < 5; i++) {
+    if(vetor[i] == vetor2[i]) {
+        vetor3[i] == vetor[i]
+    }
+}
 
-let dezConto = parseInt(notas / 10);
-notas -= dezConto * 10;
-
-let cincoConto = parseInt(notas / 5);
-notas -= cincoConto * 5;
-
-let doisConto = parseInt(notas / 2);
-notas -= doisConto * 2;
-
-let umReal = parseInt(notas / 1);
-notas -= umReal * 1;
-
-let cinquentaCentavos = parseInt(notas / 0.5);
-notas -= cinquentaCentavos * 0.5;
-
-let vinteCincoCentavos = parseInt(notas / 0.25);
-notas -= vinteCincoCentavos * 0.25;
-
-let dezCentavos = parseInt(notas / 0.1);
-notas -= dezCentavos * 0.1;
-
-let cincoCentavos = parseInt(notas / 0.05);
-notas -= cincoCentavos * 0.05;
-
-let umCentavo = parseInt(notas / 0.01);
-notas -= umCentavo * 0.1;
-
-// As moedas possíveis são de 1, 0.50, 0.25, 0.10, 0.05 e 0.01
-// talvez a resolução é um parsefloat só no console?
-console.log(cemConto);
-console.log(cinquentaConto);
-console.log(vinteConto);
-console.log(dezConto);
-console.log(cincoConto);
-console.log(doisConto);
-console.log(umReal);
-console.log(cinquentaCentavos);
-console.log(vinteCincoCentavos);
-console.log(dezCentavos);
-console.log(cincoCentavos);
-console.log(umCentavo);
-
+console.log(vetor3)
 </script>
 </body>
 </html>

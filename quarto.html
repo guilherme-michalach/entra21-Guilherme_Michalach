@@ -7,36 +7,24 @@
 </head>
 <body>
     <script>
-        let turno = prompt("Insira a letra inicial do turno em que você estuda")
-    
-        switch (turno) {
-            case "M":
-            console.log("Bom dia!")
-            break;
-    
-            case "V":
-            console.log("Boa tarde!")
-            break;
-    
-            case "N":
-            console.log("Boa noite!")
-            break;
-    
-            case "m":
-            console.log("Bom dia!")
-            break;
-    
-            case "v":
-            console.log("Boa tarde!")
-            break;
-    
-            case "n":
-            console.log("Boa noite!")
-            break;
-    
-            default:
-            console.log("Turno inválido!")
+    let n = Number(prompt("Me de até que numero queres da sequencia"))
+    let teste = n
+    let inicial = 1
+    let anteriorInicial = 0
+    let sequencia = 1
+    for(n; n > 0;n) {
+        console.log(sequencia)
+        sequencia = inicial + anteriorInicial
+        anteriorInicial = inicial
+        inicial = sequencia
+        if (n <= inicial) {
+            break
         }
+        if (inicial >= teste+1) {
+            break
+        }
+       
+    }
     </script>
 </body>
 </html>
