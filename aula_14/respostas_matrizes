@@ -144,3 +144,29 @@ console.log(`A soma dos números acima da diagonal principal é: ${soma}`)
 
 6)
 
+let matriz = []
+let somaMedia = 0
+let media = 0
+let amostraMatriz = ""
+
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 6 ; j++) {
+        if(j === 0) {
+            matriz[i][j] = String(prompt("Insira o nome do aluno"))
+        } else if (j < 4){
+            matriz[i][j] = +prompt("Insira a nota do aluno")
+            somaMedia += matriz[i][j]
+        } else if (j == 4) {
+            media = somaMedia / 3
+            matriz[i][j] = media.toFixed(2)
+            somaMedia = 0
+        } else if (j == 5) {
+            matriz[i][4] >= 6 ? matriz[i][j] = "Aprovado" : matriz[i][j] = "Reprovado"
+        }
+        amostraMatriz += matriz[i][j] + "\t"
+    }
+    amostraMatriz += "\n"
+}
+
+console.log(amostraMatriz)
