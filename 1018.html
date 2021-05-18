@@ -7,14 +7,17 @@
 </head>
 <body>
     <script>
+let valor = String(prompt("Insira um valor positivo:"))
+let inversor = ""
 
+if(valor < 0) {
+    console.log("Valor inválido")
+}
+
+for (let i = valor.length - 1; i >= 0; i--) { 
+    inversor += valor[i]
+}
+console.log(inversor)
     </script>
 </body>
 </html>
-
- <!-- let numero = 0
-//         for(let i = 0; i < 20; i++) {
-//             if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0) {
-//                 console.log(i)
-//             }
-//         } -->

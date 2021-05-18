@@ -8,38 +8,40 @@
 <body>
     <script>
 
-let matriz = []
-let l1 = 0
-let c1 = 0
+let produtos = []
+let precos = []
+let qtdInferior50 = 0
+let mediaSuperior100 = 0
+let cont100 = 0
+let valor = 0
+let nomes = ""
 
-for(let i = 0; i < 3; i++) {
-    matriz[i] = []
-    for(let j = 0; j < 3; j++) { 
-        matriz[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1}:`)
+for(let i = 0; i < 5; i++) {
+    let produtosNome = prompt("Insira o nome do produto")
+    let precosProdutos = +prompt("Insira o valor do produto")
+
+    produtos[i] = produtosNome
+    precos[i] = precosProdutos
+
+    if(precos[i] < 50.00) {
+        qtdInferior50++
+    }
+
+    if(precos[i] >= 50.00 && precos[i] <= 100.00) {
+        nomes += produtosNome + "\n"
+    }
+
+    if(precos[i] > 100.00) {
+        cont100++
+        mediaSuperior100 += precos[i]
+        valor = mediaSuperior100 / cont100
     }
 }
 
-let buscador = +prompt(`Insira o valor a ser buscado na matriz:`)
-
-pesquisa:
-for(let i = 0; i < 3; i++) {
-    for(let j = 0; j < 3; j++) {
-        if(buscador ===matriz[i][j]) {
-            l1 = i
-            c1 = j
-            break pesquisa
-        }
-    }
-}
-
-//talvez fazer tudo dentro do if de cima?
-//resolver problema do não encontrado - ver melhor sobre o outro método
-if (l1) {
-    console.log(`O número ${buscador} está na linha ${l1 + 1}, coluna ${c1 + 1}`)
-} else {
-    console.log(`O número ${buscador} não foi encontrado`) 
-}
-
+//colocar console com nomes e preços também
+console.log(`A quantidade de produtos com valor inferior a R$ 50,00 foi de: ${qtdInferior50}`)
+console.log(`O nome dos produtos com preço entre R$ 50,00 e R$ 100,00 é: ${nomes}`)
+console.log(`A média de preço dos produtos com valor superior à R$ 100,00 foi: ${valor.toFixed(2)}`)
 </script>
 </body>
 </html>

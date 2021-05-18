@@ -8,14 +8,20 @@
 <body>
     <script>
 let vetor = []
-let valorSubstituto = 0
-for(let i = 0; i < 10; i++) {
-    // let valores = Math.floor(Math.random() * (11 - 1)) + 1
-    let valores = +prompt("Insira um valor")
-    vetor[i] = valores
+let vetorReverso = []
+let inversor = 5
+
+for(let i = 0; i < 6; i++) {
+    vetor[i] = +prompt("Insira um número par:")
+    if(vetor[i] % 2 != 0) {
+        alert("Valor inválido!!!")
+        break
+    }
+    vetorReverso[inversor] = vetor[i]
+    inversor--
 }
-
-
+console.log(vetor)
+console.log(vetorReverso)
     </script>
 </body>
 </html>

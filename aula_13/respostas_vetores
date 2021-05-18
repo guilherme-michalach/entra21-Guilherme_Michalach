@@ -58,18 +58,33 @@ console.log(`Menor número do vetor: ${menor}`)
 
 let vetor1 = []
 let vetor2 = []
-let teste = 4
 
 for (let i = 0; i < 5; i++) {
 
     vetor1[i] = +prompt(`Informe o ${i + 1}° valor:`)
-    vetor2[teste] = vetor1[i]
-    teste--
+    vetor2[4 - i] = vetor1[i]
 }
 
 console.log(vetor1, vetor2)
 
-5)
+Há outro método bem melhor
+
+Ou
+Corrigir
+let vetor1 = []
+let vetor2 = []
+
+for (let i = 0; i < 5; i++) {
+
+    vetor1[i] = +prompt(`Informe o ${i + 1}° valor:`)
+}
+
+for(let i = vetor1.length - 1; i >= 0; i++) {
+    vetor2.push(vetor1[i])
+}
+
+console.log(vetor1, vetor2)
+5) Modificar questão de já ter nome
 
 let nomes = ["Guilherme", "William", "Francesco", "Arthur", "Felipe"]
 let info = prompt("Digite um nome")
@@ -81,6 +96,27 @@ if (nomes.indexOf(info) != -1) {
 }
 
 //Tentar algo com booleans depois
+Que no caso seria dessa forma:
+
+let nomes = []
+for (let i = 0; i < 5; i++) {
+    nomes[i] = prompt("Digite um nome")
+}
+
+let nomeProcurado = prompt("Digite o nome desejado")
+
+let achou
+for (let i = 0; i < 5; i++) {
+    if (nomes[i] === nomeProcurado) {                    
+        console.log("Achei!")
+        achou = true
+        break
+    }
+}
+
+console.log(`Nomes: ${nomes}`)
+if (!achou) console.log("Não achei!")
+}
 
 6)
 
@@ -107,7 +143,7 @@ for(let i = 0; i < 5; i++) {
 console.log(vetor)
 console.log(vetorResult)
 
-8)
+8) Corrigir método do reverso
 
 let vetor = []
 let vetorReverso = []
@@ -117,7 +153,7 @@ for(let i = 0; i < 6; i++) {
     vetor[i] = +prompt("Insira um número par:")
     if(vetor[i] % 2 != 0) {
         alert("Valor inválido!!!")
-        break
+        continue
     }
     vetorReverso[inversor] = vetor[i]
     inversor--
@@ -139,7 +175,10 @@ for(let i = 0; i < 6; i++) {
 console.log(vetor)
 console.log(vetor.reverse())
 
-9)
+9) Há outro método menor
+o "use strict" força o navegador a usar uma versão mais atual do JS
+para funções por ex, não precisa usar ele
+Conferir certo depois como ele ta rodando
 
 let vetor = [];
 let contador = 0
@@ -184,7 +223,7 @@ for (let i = 0; i < 10; i++) {
 console.log(`Foram digitados ${negativos} números negativos.`)
 console.log(`A soma dos valores positivos foi de: ${soma}`)
 
-11)
+11) Tem como reduzir o tamanho do meu código
 
 let vetor = []
 let maior = 0
@@ -199,8 +238,7 @@ for(let i = 0; i < 5; i++) {
     if(vetor[i] < menor) {
         menor = vetor[i]
         posicaoMenor = i
-    }
-    if(vetor[i] > maior) {
+    } else if(vetor[i] > maior) {
         maior = vetor[i]
         posicaoMaior = i
     }
@@ -208,7 +246,7 @@ for(let i = 0; i < 5; i++) {
 console.log(`O índice do maior número é: ${posicaoMaior}`)
 console.log(`O índice do menor número é: ${posicaoMenor}`)
 
-12)
+12) Tem como reduzir o tamanho do meu código com switch e for pro console
 
 let vetor = []
 
@@ -245,7 +283,7 @@ console.log(`Vezes em que rolou o dado n° 5: ${valor5}`)
 console.log(`Vezes em que rolou o dado n° 6: ${valor6}`)
 
 //Fazer com outro método que inclua switch também
-13)
+13) Pode usar push também
 
 let vetor = []
 let maiorNota = 0
@@ -274,7 +312,7 @@ let media = mediaTurma / vetor.length
 console.log(`Média da turma: ${media.toFixed(2)}`)
 console.log(`Maior nota: ${maiorNota.toFixed(2)}`)
 
-14)
+14) Da de reduzir pra 2 for's, só fazer a comparação no segundo
 
 let vetor = []
 let vetor2 = []
@@ -298,9 +336,13 @@ for(let i = 0; i < 5; i++) {
     }
 }
 
-bool ? console.log("Os valores de ambos vetores são iguais") : console.log("Os valores de ambos vetores são diferentes")
+bool ? 
+    console.log("Os valores de ambos vetores são iguais") 
+: 
+    console.log("Os valores de ambos vetores são diferentes")
 
-15) ARRUMAR CONSOLE
+15) Tem como simplificar
+Se não quiser repetir valores na intersecção, tem que fazer um for pra intersecção
 
 let vetor = []
 let vetor2 = []
@@ -331,7 +373,7 @@ console.log(`Vetor 1: [${vetor}]`)
 console.log(`Vetor 2: [${vetor2}]`)
 console.log(`Intersecção: [${vetor3}]`)
 
-16)
+16) Tem como fazer fail proof
 
 let vetor = []
 
@@ -342,7 +384,8 @@ for(let i = vetor[0]; i <= vetor[1]; i += 2) {
     console.log(i)
 }
 
-17)
+17) Fazer das outras formas também depois
+Pesquisar sorting algorithms depois
 
 let vetor = []
 let valorSubstituto = 0
@@ -372,7 +415,7 @@ for(let i = 0; i < 10; i++) {
 
 console.log(vetor)
 
-18)
+18) Se fizer com ternário fica menor
 
 let vetor = []
 let somaPares = 0
@@ -393,7 +436,7 @@ console.log(`Os valores presentes no vetor são: ${vetor}`)
 console.log(`A soma dos números pares do vetor é: ${somaPares}`)
 console.log(`A multiplicação dos números impares do vetor é: ${multiImpares}`)
 
-19)
+19) Fazer outro método depois também
 
 let texto = String(["Sem trocar que o espinho é seco.\n Sem trocar que seco é ser sol.\n Sem trocar que algum espinho seco secará."]).split(" ")
 console.log(texto.join(" "))
@@ -426,12 +469,13 @@ for(let i = 0; i < 10; i++) {
     }
 }
 
-21)
+21) corrigir console 50 e 100
 
 let produtos = []
 let precos = []
 let qtdInferior50 = 0
 let mediaSuperior100 = 0
+let cont100 = 0
 let valor = 0
 let nomes = ""
 
@@ -451,11 +495,13 @@ for(let i = 0; i < 5; i++) {
     }
 
     if(precos[i] > 100.00) {
+        cont100++
         mediaSuperior100 += precos[i]
-        valor = mediaSuperior100 / i
+        valor = mediaSuperior100 / cont100
     }
 }
 
+//colocar console com nomes e preços também
 console.log(`A quantidade de produtos com valor inferior a R$ 50,00 foi de: ${qtdInferior50}`)
 console.log(`O nome dos produtos com preço entre R$ 50,00 e R$ 100,00 é: ${nomes}`)
 console.log(`A média de preço dos produtos com valor superior à R$ 100,00 foi: ${valor.toFixed(2)}`)

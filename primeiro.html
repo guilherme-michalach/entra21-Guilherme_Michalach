@@ -7,17 +7,36 @@
 </head>
 <body>
     <script>
+let matriz = []
+let matrizMedia = []
+let valorMedia = 0
 
-let texto = String(["Sem trocar que o espinho é seco.\n Sem trocar que seco é ser sol.\n Sem trocar que algum espinho seco secará."]).split(" ")
-console.log(texto.join(" "))
-
-for(let i = texto.length - 1; i > 0; i--) {
-    if(texto[i] === "trocar") {
-        texto[i] = "sacar"
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    matrizMedia[i] = []
+    for(let j = 0; j < 4; j++) {
+        matriz[i][0] = +prompt("Insira o nome do aluno")
+        matriz[i][j] = +prompt("Insira a nota do aluno")
+        if(j === 0) {
+            matriz[i][j] = +prompt("Insira o nome do aluno")
+            // alterar desse +prompt depois
+        } else if (j != 0){
+            matriz[i][j] = +prompt("Insira a nota do aluno")
+        }
+        matrizMedia[i][j] = matriz[i][j]
     }
+    
 }
 
-console.log(texto.join(" "))
+for(let i = 0; i < 3; i++) {
+    matrizMedia[i] = []
+    for(let j = 0; j < 5; j++) {
+        if(j != 0) {
+            valorMedia += matrizMedia[i][j]
+            matrizMedia.push(valorMedia)
+        }
+    }
+}
     </script>
 </body>
 </html>
