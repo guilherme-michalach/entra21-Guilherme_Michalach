@@ -62,3 +62,15 @@ console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
 console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
 
 4)
+
+let valor = String(prompt("Insira um valor positivo:"))
+let inversor = ""
+
+if(valor < 0) {
+    console.log("Valor inválido")
+}
+
+for (let i = valor.length - 1; i >= 0; i--) { 
+    inversor += valor[i]
+}
+console.log(inversor)
