@@ -51,13 +51,13 @@ for(let i = 0; i < 5; i++) {
 }
 
 console.log(amostraMatriz)
-console.log(matriz)
 
 3)
 
 let matriz = []
 let l1 = 0
 let c1 = 0
+let valor = 0
 
 for(let i = 0; i < 3; i++) {
     matriz[i] = []
@@ -66,28 +66,81 @@ for(let i = 0; i < 3; i++) {
     }
 }
 
-console.log(amostraMatriz)
-
 let buscador = +prompt(`Insira o valor a ser buscado na matriz:`)
 
 pesquisa:
 for(let i = 0; i < 3; i++) {
+    matriz[i]
     for(let j = 0; j < 3; j++) {
-        if(buscador ===matriz[i][j]) {
+        if(buscador === matriz[i][j]) {
+            valor = buscador
+            buscador = true
             l1 = i
             c1 = j
             break pesquisa
-        }
+        }      
     }
 }
 
 //talvez fazer tudo dentro do if de cima?
 //resolver problema do não encontrado - ver melhor sobre o outro método
-if (l1) {
-    console.log(`O número ${buscador} está na linha ${l1 + 1}, coluna ${c1 + 1}`)
+if (buscador = true) {
+    console.log(`O número ${valor} está na linha ${l1 + 1}, coluna ${c1 + 1}`)
 } else {
-    console.log(`O número ${buscador} não foi encontrado`) 
+    console.log(`O número ${valor} não foi encontrado`) 
 }
 
 4)
+
+let matriz1 = []
+let matriz2 = []
+let matrizMaior = []
+let amostraMatriz = ""
+
+for(let i = 0; i < 3; i++) {
+    matriz1[i] = []
+    matriz2[i] = []
+    for(let j = 0; j < 3; j++) {
+        matriz1[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1} na primeira matriz:`)
+        matriz2[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1} na segunda matriz:`)
+    }
+}
+
+for(let i = 0; i < 3; i++) {
+    matrizMaior[i] = []
+    for(let j = 0; j < 3; j++) {
+        matriz1[i][j] > matriz2[i][j] ? matrizMaior[i][j] = matriz1[i][j] : matrizMaior[i][j] = matriz2[i][j]  
+        amostraMatriz += matrizMaior[i][j] + "\t"
+    }
+    amostraMatriz += "\n"
+}
+
+console.log(amostraMatriz)
+
+5)
+
+let matriz = []
+let matrizMaior = []
+let amostraMatriz = ""
+let soma = 0
+
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 3; j++) {
+        matriz[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1}:`)
+        amostraMatriz += matriz[i][j] + "\t"
+
+        if(i == 0 && j < 3 && j > 0) {
+            soma += matriz[i][j]
+        }
+        if(i == 1 && j == 2) {
+            soma+= matriz[i][j]
+        }
+    }
+    amostraMatriz += "\n"
+}
+console.log(amostraMatriz)
+console.log(`A soma dos números acima da diagonal principal é: ${soma}`)
+
+6)
 
