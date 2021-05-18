@@ -1,0 +1,93 @@
+1)
+
+let matriz = []
+let maiores = 0
+
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 3; j++) {
+        matriz[i][j] = +prompt(`Insira um número na linha ${i + 1} e coluna ${j + 1}:`)
+        if(matriz[i][j] > 10) {
+            maiores++
+        }
+    }
+}
+
+console.log(`A matriz possui ${maiores} números maiores do que 10.`)
+
+2)
+
+let matriz = []
+let maiores = 0
+let amostraMatriz = ""
+
+for(let i = 0; i < 5; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 5; j++) {
+        if(i == j) {
+            amostraMatriz += matriz[i][j] = 1 + "\t"
+        }
+        if(i != j) {
+            amostraMatriz += matriz[i][j] = 0 + "\t"
+        }
+    }
+    amostraMatriz += "\n"
+}
+
+console.log(amostraMatriz)
+
+Ou com ternário
+
+let matriz = []
+let amostraMatriz = ""
+
+for(let i = 0; i < 5; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 5; j++) {
+        i == j ? matriz[i][j] = 1 : matriz[i][j] = 0
+        amostraMatriz += matriz[i][j] + "\t"
+    }
+    amostraMatriz += "\n"
+}
+
+console.log(amostraMatriz)
+console.log(matriz)
+
+3)
+
+let matriz = []
+let l1 = 0
+let c1 = 0
+
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 3; j++) { 
+        matriz[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1}:`)
+    }
+}
+
+console.log(amostraMatriz)
+
+let buscador = +prompt(`Insira o valor a ser buscado na matriz:`)
+
+pesquisa:
+for(let i = 0; i < 3; i++) {
+    for(let j = 0; j < 3; j++) {
+        if(buscador ===matriz[i][j]) {
+            l1 = i
+            c1 = j
+            break pesquisa
+        }
+    }
+}
+
+//talvez fazer tudo dentro do if de cima?
+//resolver problema do não encontrado - ver melhor sobre o outro método
+if (l1) {
+    console.log(`O número ${buscador} está na linha ${l1 + 1}, coluna ${c1 + 1}`)
+} else {
+    console.log(`O número ${buscador} não foi encontrado`) 
+}
+
+4)
+

@@ -8,27 +8,38 @@
 <body>
     <script>
 
-let vetor = []
-let vetor2 = []
-let vetor3 = []
+let matriz = []
+let l1 = 0
+let c1 = 0
 
-for(let i = 0; i < 5; i++) {
-    let valorV1 = +prompt("Insira um valor")
-    vetor[i] = valorV1
-}
-
-for(let i = 0; i < 5; i++) {
-    let valorV2 = +prompt("Insira um valor")
-    vetor2[i] = valorV2
-}
-
-for(let i = 0; i < 5; i++) {
-    if(vetor[i] == vetor2[i]) {
-        vetor3[i] == vetor[i]
+for(let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for(let j = 0; j < 3; j++) { 
+        matriz[i][j] = +prompt(`Insira um valor na linha ${i + 1} da coluna ${j + 1}:`)
     }
 }
 
-console.log(vetor3)
+let buscador = +prompt(`Insira o valor a ser buscado na matriz:`)
+
+pesquisa:
+for(let i = 0; i < 3; i++) {
+    for(let j = 0; j < 3; j++) {
+        if(buscador ===matriz[i][j]) {
+            l1 = i
+            c1 = j
+            break pesquisa
+        }
+    }
+}
+
+//talvez fazer tudo dentro do if de cima?
+//resolver problema do não encontrado - ver melhor sobre o outro método
+if (l1) {
+    console.log(`O número ${buscador} está na linha ${l1 + 1}, coluna ${c1 + 1}`)
+} else {
+    console.log(`O número ${buscador} não foi encontrado`) 
+}
+
 </script>
 </body>
 </html>
