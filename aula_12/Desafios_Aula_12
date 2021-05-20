@@ -61,7 +61,7 @@ console.log(`Quantidade de números no intervalo [0-25]: ${intervalo1}`)
 console.log(`Quantidade de números no intervalo [26-50]: ${intervalo2}`)
 console.log(`Quantidade de números no intervalo [51-75]: ${intervalo3}`)
 
-4)
+4) Fazer sem vetor
 
 let valor = String(prompt("Insira um valor positivo:"))
 let inversor = ""
