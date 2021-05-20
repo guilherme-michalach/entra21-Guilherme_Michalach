@@ -1,0 +1,146 @@
+1)
+
+"use strict"
+let numero = +prompt("Insira um número")
+
+function verificarPositivo(numero) {
+    return numero >= 0
+}
+
+console.log(verificarPositivo(numero))
+
+Ou
+
+"use strict"
+let numero = +prompt("Insira um número")
+
+function verificarPositivo(numero) {
+    if(numero >= 0) {
+        return true
+    }
+    return false
+}
+
+console.log(verificarPositivo(numero))
+
+Ou
+
+"use strict"
+let ehPositivo = numero => numero >= 0
+
+let numero = +prompt("Insira um número")
+
+console.log(ehPositivo(numero))
+
+2)
+
+"use strict"
+let isMinimo = (a, b) => a < b ? a : b
+
+let a = +prompt("Insira o número A:")
+let b = +prompt("Insira o número B:")
+
+console.log(`O menor valor entre ${a} e ${b} é: ${isMinimo(a, b)}`)
+
+3)
+
+"use strict"
+let isElevado = (a, b) => a**b
+
+let a = +prompt("Insira o número A:")
+let b = +prompt("Insira o número B:")
+
+console.log(`A potenciação de ${a} elevado à ${b} é: ${isElevado(a, b)}`)
+
+4)
+
+"use strict"
+let isMedia = (a, b, c) => (a + b + c) / 3 
+
+let a = +prompt("Insira a primeira nota:")
+let b = +prompt("Insira a segunda nota:")
+let c = +prompt("Insira a terceira nota:")
+
+console.log(`A média das três notas é: ${isMedia(a, b, c)}`)
+
+5)
+
+"use strict"
+function ismedia(media) {
+
+    if (0 <= media && media < 5) {
+        console.log("D")
+    } else if (5 <= media && media < 7) {
+        console.log("C")
+    } else if (7 <= media && media < 9) {
+        console.log("B")
+    } else if (9 <= media && media <= 10) {
+        console.log("A")
+    } else {
+        console.log("Valor inválido")
+    }
+}
+
+let media = +prompt("Insira a média do aluno:")
+
+ismedia(media)
+
+6) Fazer com ternário também depois
+
+"use strict"
+function isIdeal (sexo, altura) {
+    if (sexo == "Homem") {
+        console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
+    } else if (sexo == "Mulher") {
+        console.log(`Seu peso ideal é: ${(72.7 * altura - 58).toFixed(2)} KG`)
+    } else {
+        console.log("Gênero inválido")
+    }
+}
+
+let sexo = prompt("Insira seu sexo/gênero:\nExemplo: Homem/Mulher")
+let altura = +prompt("Insira sua altura em metro:")
+
+isIdeal(sexo, altura)
+
+7)
+
+"use strict"
+function isArray () {
+    console.log(`Primeiro número do Array: ${array[0]}`)
+    console.log(`Último número do Array: ${array[array.length - 1]}`)
+}
+
+let array = []
+
+while(true) {
+    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -1") 
+
+    if(numero == -1) {
+        break
+    }
+
+    array.push(numero)
+
+}
+
+isArray()
+
+8) Fazer de mais uma forma, que essa é meio roubada
+
+"use strict"
+function isQuantity() {
+    console.log("#".repeat(numero))
+}
+
+let numero = +prompt("Insira um número positivo")
+isQuantity()
+
+Ou
+
+
+
+9)
+
+
+
