@@ -82,6 +82,7 @@ for(let i = 0; i < 3; i++) {
     }
 }
 
+//facilitar essa depois
 //talvez fazer tudo dentro do if de cima?
 //resolver problema do não encontrado - ver melhor sobre o outro método
 if (buscador = true) {
@@ -117,7 +118,7 @@ for(let i = 0; i < 3; i++) {
 
 console.log(amostraMatriz)
 
-5)
+5) Simplificar ela depois
 
 let matriz = []
 let matrizMaior = []
@@ -142,7 +143,7 @@ for(let i = 0; i < 3; i++) {
 console.log(amostraMatriz)
 console.log(`A soma dos números acima da diagonal principal é: ${soma}`)
 
-6)
+6) Tem como simplificar
 
 let matriz = []
 let somaMedia = 0
