@@ -55,14 +55,14 @@ console.log(`A potenciação de ${a} elevado à ${b} é: ${isElevado(a, b)}`)
 4)
 
 "use strict"
-let isMedia = (a, b, c) => (a + b + c) / 3 
+let isMedia = (mediaTotal) => mediaTotal / 3 
 
-let a = +prompt("Insira a primeira nota:")
-let b = +prompt("Insira a segunda nota:")
-let c = +prompt("Insira a terceira nota:")
+let mediaTotal = 0
+for(let i = 0; i < 3; i++) {
+    mediaTotal += +prompt(`Insira a ${i + 1}° nota:`)
+}
 
-console.log(`A média das três notas é: ${isMedia(a, b, c)}`)
-
+console.log(`A média das três notas é: ${isMedia(mediaTotal)}`)
 5)
 
 "use strict"
@@ -70,11 +70,11 @@ function ismedia(media) {
 
     if (0 <= media && media < 5) {
         console.log("D")
-    } else if (5 <= media && media < 7) {
+    } else if (media < 7) {
         console.log("C")
-    } else if (7 <= media && media < 9) {
+    } else if (media < 9) {
         console.log("B")
-    } else if (9 <= media && media <= 10) {
+    } else if (media <= 10) {
         console.log("A")
     } else {
         console.log("Valor inválido")
@@ -89,19 +89,17 @@ ismedia(media)
 
 "use strict"
 function isIdeal (sexo, altura) {
-    if (sexo == "Homem") {
+    if (sexo == "H") {
         console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
-    } else if (sexo == "Mulher") {
+    } else if (sexo == "M") {
         console.log(`Seu peso ideal é: ${(72.7 * altura - 58).toFixed(2)} KG`)
     } else {
         console.log("Gênero inválido")
     }
 }
 
-let sexo = prompt("Insira seu sexo/gênero:\nExemplo: Homem/Mulher")
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
 let altura = +prompt("Insira sua altura em metro:")
-
-isIdeal(sexo, altura)
 
 7)
 
@@ -114,9 +112,9 @@ function isArray () {
 let array = []
 
 while(true) {
-    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -1") 
+    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -123") 
 
-    if(numero == -1) {
+    if(numero == -123) {
         break
     }
 
@@ -141,6 +139,202 @@ Ou
 
 
 9)
+
+
+
+10)
+
+"use strict"
+
+function isIdade() {
+    idade = anoAtual - ano
+}
+
+let idade
+let anoAtual = new Date().getFullYear()
+let ano = +prompt("Insira o ano em que você nasceu:")
+
+isIdade()
+console.log(idade)
+
+11)
+
+"use strict"
+
+function alterar() {
+    vetorModificado[1] = 10
+    vetorModificado[2] = 30
+}
+
+let vetor = []
+let vetorModificado = []
+
+for(let i = 0; i < 5; i++) {
+vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
+vetorModificado[i] = vetor[i]
+}
+
+alterar()
+console.log(`Vetor original : ${vetor}`)
+console.log(`Vetor modificado : ${vetorModificado}`)
+
+12) Fazer de outra forma também
+
+"use strict"
+
+function valorPontas() {
+
+    array.sort(function(a, b){return b-a})
+    
+    let maior = array[0],
+        menor = array[49]
+
+    console.log(`O maior número do array é: ${maior} enquanto que o menor é ${menor}`)
+}
+
+let array = []
+
+
+for(let i = 0; i < 50; i++) {
+    array[i] = Math.floor(Math.random() * (101 - 1)) + 1
+}
+
+valorPontas()
+
+13)
+
+function idade() {
+
+    let calculo = 0
+    calculo += (array[0] * 365) + (array[1] * 30) + array[2]
+    console.log(`Sua idade em dias é: ${calculo}`)
+    
+}
+
+let array = []
+
+for(let i = 0; i < 3; i++) {
+
+    let idadeNumeros = +prompt("Insira sua idade em anos, meses e por fim dias")
+    array[i] = idadeNumeros
+
+}
+
+idade()
+
+14)
+
+"use strict"
+
+function divisores() {
+
+    for(let i = valor; i > 0; i--) {
+        if(valor % i == 0) {
+            qtd++
+        }
+    }   
+
+    console.log(`O número de divisores desse valor até 1 é: ${qtd}`)
+
+}
+
+let valor = +prompt("Insira um valor inteiro positivo:")
+let qtd = 0
+
+divisores(valor)
+
+15)
+
+"use strict"
+
+function divisores() {
+
+    let inicial = valor
+
+    for (let i = valor - 1; i > 0; i--) {
+        valor *= i
+    }  
+
+    console.log(`O resultado do fatorail de ${inicial} é: ${valor}`)
+
+}
+
+let valor = +prompt("Insira um valor inteiro positivo:")
+divisores()
+
+16)
+
+"use strict"
+
+function valorPerfeito(valor) {
+
+    let umValor = 0
+
+    for (let i = 1; i <= valor / 2; i++) {
+
+        if (valor % i == 0) {
+            umValor += i
+        }
+
+    }
+
+    if (umValor === valor && umValor !== 0) {
+        console.log(`O número ${valor} é um valor perfeito`)
+    } else console.log(`O número ${valor} não é um valor perfeito`)
+
+}
+
+let valor = +prompt("Insira um valor:")
+valorPerfeito(valor)
+
+17) Versão roubada, fazer outra depois
+
+function alterar() {
+    
+    console.log("Antes da ordenação:"); console.log(vetor)
+    // console.log(vetor.slice(0, 49))
+    vetor.sort(function(a, b){return b-a})
+    console.log("Após a ordenação:"); console.log(vetor)
+    
+}
+
+let vetor = []
+
+for(let i = 0; i < 50; i++) {
+
+vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
+
+}
+
+alterar()
+
+Ou
+
+"use strict"
+
+function alterar() {
+    
+    vetorModificado.sort(function(a, b){return b-a})
+
+}
+
+let vetor = []
+let vetorModificado = []
+
+for(let i = 0; i < 50; i++) {
+
+    vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
+    vetorModificado[i] = vetor[i]
+
+}
+
+alterar()
+console.log("Antes da ordenação:")
+console.log(vetor)
+console.log("Após a ordenação:")
+console.log(vetorModificado)
+
+18)
 
 
 

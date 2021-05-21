@@ -8,14 +8,29 @@
 <body>
     <script>
 "use strict"
-function repeticao(elemento, numero) {
-se numero, repetir a palavra    
+
+function returnPar() {
+
+    for(let i = 0; i < 10; i++) {
+    
+        if(vetorInicial[i] % 2 == 0 && i % 2 == 0) {
+            console.log("Tem um")
+        }
+    
+    }
+
 }
 
-let elemento = String(prompt("Insira o elemento que deseja repetir"))
-let numero = +prompt("Insira o número de vezes que você deseja repetir a palavra")
+let vetorInicial = []
 
-repeticao()
+for(let i = 0; i < 10; i++) {
+
+    vetorInicial[i] = +prompt(`Insira o ${i + 1} valor do vetor:`)
+
+}
+
+returnPar()
+
     </script>
 </body>
 </html>

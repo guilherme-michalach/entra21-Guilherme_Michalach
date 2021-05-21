@@ -7,21 +7,26 @@
 </head>
 <body>
     <script>
-let vetor = []
-let vetorReverso = []
-let inversor = 5
+"use strict"
+let valores = [];
+        for (let i = 0; i < 3; i++){
+            valores[i] = +prompt(`Informe o ${i + 1}º parâmetro`);
+        }
+        function bhaskara(parametros){
+            let delta = (parametros[1] ** 2 - 4 * parametros[0] * parametros[2]),
+                raizes = [];
 
-for(let i = 0; i < 6; i++) {
-    vetor[i] = +prompt("Insira um número par:")
-    if(vetor[i] % 2 != 0) {
-        alert("Valor inválido!!!")
-        break
-    }
-    vetorReverso[inversor] = vetor[i]
-    inversor--
-}
-console.log(vetor)
-console.log(vetorReverso)
+            if (delta < 0){
+                return "Cálculo impossível";
+            }
+            
+            raizes[0] = (-parametros[1] + delta) / 2 * parametros[0];
+            raizes[1] = (-parametros[1] - delta) / 2 * parametros[0];
+
+            return raizes;
+        }
+
+        console.log(bhaskara(valores));
     </script>
 </body>
 </html>
