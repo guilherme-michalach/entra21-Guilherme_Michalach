@@ -354,6 +354,7 @@ for(let i = 0; i < 50; i++) {
 }
 
 alterar()
+
 console.log("Antes da ordenação:")
 console.log(vetor)
 console.log("Após a ordenação:")
@@ -378,7 +379,7 @@ function calculoDelta (a,b,c) {
 
 delta = calculoDelta (a,b,c)
 
-function calculoBhaskara (a,b,c,delta) {
+function calculoBhaskara(a,b,c,delta) {
 
     let positivo = ((b) * -1 + Math.sqrt(delta)) / (2 * a)
     let negativo = ((b) * -1 - Math.sqrt(delta)) / (2 * a)
@@ -397,7 +398,7 @@ delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calcu
 
 let vetor = []
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 10; i++) {
 
     vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
 
@@ -406,7 +407,7 @@ function isPares(vetor) {
 
     let pares = []
 
-    for(let i = 0; i < 50; i++) {
+    for(let i = 0; i < 10; i++) {
 
         if((vetor[i] % 2 === 0) && (i % 2 === 0)){
             pares.push(vetor[i])
