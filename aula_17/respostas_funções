@@ -147,11 +147,9 @@ let amostra = []
 
 for (let i = 0; i < 2; i++){
 
-    if (qtd[i] === 0){
-        qtd[i] = prompt("Informe a palavra")
-    } else {
-        qtd[i] = prompt("Informe o número de vezes que se repetirá")
-    }
+    if(i < 1) qtd[0] = prompt("Insira a palavra")
+    
+    if (i > 0) qtd[1] = prompt("Insira o número de vezes que será repetido o elemento")
 
 }
 
@@ -214,7 +212,7 @@ function valorPontas() {
     let maior = array[0],
         menor = array[49]
 
-    console.log(`O maior número do array é: ${maior} enquanto que o menor é ${menor}`)
+    console.log(`O maior número do array é ${maior} enquanto que o menor é ${menor}`)
 }
 
 let array = []
@@ -303,9 +301,10 @@ function valorPerfeito(valor) {
 
     }
 
-    if (umValor === valor && umValor !== 0) {
-        console.log(`O número ${valor} é um valor perfeito`)
-    } else console.log(`O número ${valor} não é um valor perfeito`)
+    umValor === valor & umValor !== 0 ? 
+        console.log(`O número ${valor} é um valor perfeito`) 
+            :
+        console.log(`O número ${valor} não é um valor perfeito`)
 
 }
 
