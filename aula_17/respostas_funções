@@ -93,7 +93,8 @@ let media = +prompt("Insira a média do aluno:")
 
 ismedia(media)
 
-6)
+6) Alteração virgula pra ponto ver depois com o replace
+Segunda forma tornar switch
 
 "use strict"
 
@@ -107,8 +108,9 @@ function isIdeal (sexo, altura) {
     }
 }
 
-let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
-let altura = +prompt("Insira sua altura em metro:")
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M").toUpperCase()
+let altura = prompt("Insira sua altura em metro:")
+altura = +altura.replace(",", ".")
 
 isIdeal(sexo, altura)
 
@@ -125,8 +127,9 @@ function isIdeal (sexo, altura) {
 
 }
 
-let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
-let altura = +prompt("Insira sua altura em metro:")
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M").toUpperCase()
+let altura = prompt("Insira sua altura em metro:")
+altura = +altura.replace(",", ".")
 
 isIdeal(sexo, altura)
 
@@ -225,6 +228,20 @@ let ano = +prompt("Insira o ano em que você nasceu:")
 
 isIdade()
 console.log(idade)
+
+Forma que deixa menos variaveis globais
+
+"use strict"
+
+function isIdade() {
+    let anoAtual = new Date().getFullYear()
+    let idade = anoAtual - ano
+
+    console.log(idade)
+}
+
+let ano = +prompt("Insira o ano em que você nasceu:")
+isIdade()
 
 11)
 
