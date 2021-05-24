@@ -61,7 +61,7 @@ console.log(`A potenciação de ${a} elevado à ${b} é: ${isElevado(a, b)}`)
 
 "use strict"
 
-let isMedia = (mediaTotal) => mediaTotal / 3 
+let isMedia = mediaTotal => mediaTotal / 3 
 
 let mediaTotal = 0
 for(let i = 0; i < 3; i++) {
@@ -281,7 +281,7 @@ function valorPontas() {
 let array = []
 
 for(let i = 0; i < 50; i++) {
-    array[i] = Math.floor(Math.random() * (101 - 1)) + 1
+    array[i] = Math.floor(Math.random() * (1001 - 1)) + 1
 }
 
 valorPontas()
