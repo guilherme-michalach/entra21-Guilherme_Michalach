@@ -1,6 +1,7 @@
 1)
 
 "use strict"
+
 let numero = +prompt("Insira um número")
 
 function verificarPositivo(numero) {
@@ -12,6 +13,7 @@ console.log(verificarPositivo(numero))
 Ou
 
 "use strict"
+
 let numero = +prompt("Insira um número")
 
 function verificarPositivo(numero) {
@@ -26,6 +28,7 @@ console.log(verificarPositivo(numero))
 Ou
 
 "use strict"
+
 let ehPositivo = numero => numero >= 0
 
 let numero = +prompt("Insira um número")
@@ -35,6 +38,7 @@ console.log(ehPositivo(numero))
 2)
 
 "use strict"
+
 let isMinimo = (a, b) => a < b ? a : b
 
 let a = +prompt("Insira o número A:")
@@ -45,6 +49,7 @@ console.log(`O menor valor entre ${a} e ${b} é: ${isMinimo(a, b)}`)
 3)
 
 "use strict"
+
 let isElevado = (a, b) => a**b
 
 let a = +prompt("Insira o número A:")
@@ -55,6 +60,7 @@ console.log(`A potenciação de ${a} elevado à ${b} é: ${isElevado(a, b)}`)
 4)
 
 "use strict"
+
 let isMedia = (mediaTotal) => mediaTotal / 3 
 
 let mediaTotal = 0
@@ -63,9 +69,11 @@ for(let i = 0; i < 3; i++) {
 }
 
 console.log(`A média das três notas é: ${isMedia(mediaTotal)}`)
+
 5)
 
 "use strict"
+
 function ismedia(media) {
 
     if (0 <= media && media < 5) {
@@ -85,9 +93,10 @@ let media = +prompt("Insira a média do aluno:")
 
 ismedia(media)
 
-6) Fazer com ternário também depois
+6)
 
 "use strict"
+
 function isIdeal (sexo, altura) {
     if (sexo == "H") {
         console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
@@ -101,9 +110,30 @@ function isIdeal (sexo, altura) {
 let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
 let altura = +prompt("Insira sua altura em metro:")
 
+isIdeal(sexo, altura)
+
+Ou
+
+"use strict"
+
+function isIdeal (sexo, altura) {
+
+    sexo === "H" ? 
+        console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
+            :
+        console.log(`Seu peso ideal é: ${(72.7 * altura - 58).toFixed(2)} KG`)
+
+}
+
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
+let altura = +prompt("Insira sua altura em metro:")
+
+isIdeal(sexo, altura)
+
 7)
 
 "use strict"
+
 function isArray () {
     console.log(`Primeiro número do Array: ${array[0]}`)
     console.log(`Último número do Array: ${array[array.length - 1]}`)
@@ -112,9 +142,9 @@ function isArray () {
 let array = []
 
 while(true) {
-    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -123") 
+    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -12345") 
 
-    if(numero == -123) {
+    if(numero == -12345) {
         break
     }
 
@@ -124,9 +154,10 @@ while(true) {
 
 isArray()
 
-8) Fazer de mais uma forma, que essa é meio roubada
+8)
 
 "use strict"
+
 function isQuantity() {
     console.log("#".repeat(numero))
 }
@@ -136,9 +167,24 @@ isQuantity()
 
 Ou
 
+"use strict"
 
+function isQuantity(numero) {
 
-9) corrigir primeiro prompt
+    for(let i = 0; i < numero; i++) {
+        vetor.push("#")
+    }
+
+}
+
+let numero = +prompt("Insira um número positivo")
+let vetor = []
+
+isQuantity(numero)
+
+console.log((vetor).toString())
+
+9)
 
 "use strict"
 
@@ -147,9 +193,9 @@ let amostra = []
 
 for (let i = 0; i < 2; i++){
 
-    if(i < 1) qtd[0] = prompt("Insira a palavra")
+    if(i < 1) qtd[i] = prompt("Insira a palavra")
     
-    if (i > 0) qtd[1] = prompt("Insira o número de vezes que será repetido o elemento")
+    if (i > 0) qtd[i] = +prompt("Insira o número de vezes que será repetido o elemento")
 
 }
 
@@ -201,7 +247,7 @@ alterar()
 console.log(`Vetor original : ${vetor}`)
 console.log(`Vetor modificado : ${vetorModificado}`)
 
-12) Fazer de outra forma também
+12)
 
 "use strict"
 
@@ -217,6 +263,34 @@ function valorPontas() {
 
 let array = []
 
+for(let i = 0; i < 50; i++) {
+    array[i] = Math.floor(Math.random() * (101 - 1)) + 1
+}
+
+valorPontas()
+
+Ou
+
+"use strict"
+
+let maior = 50
+let menor = 50
+
+function valorPontas() {
+
+    for(let i = 0; i < 50; i++) {
+        
+        if(array[i] > maior) maior = array[i]
+
+        if (array[i] < menor) menor = array[i]
+
+    }
+
+    console.log(`O maior número do array é ${maior} enquanto que o menor é ${menor}`)
+
+}
+
+let array = []
 
 for(let i = 0; i < 50; i++) {
     array[i] = Math.floor(Math.random() * (101 - 1)) + 1
@@ -325,9 +399,7 @@ function alterar() {
 let vetor = []
 
 for(let i = 0; i < 50; i++) {
-
 vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
-
 }
 
 alterar()
@@ -346,10 +418,8 @@ let vetor = []
 let vetorModificado = []
 
 for(let i = 0; i < 50; i++) {
-
     vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
     vetorModificado[i] = vetor[i]
-
 }
 
 alterar()
