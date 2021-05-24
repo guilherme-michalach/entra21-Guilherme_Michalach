@@ -369,7 +369,7 @@ let a = +prompt("Informe o valor A:")
 let b = +prompt("Informe o valor B:")
 let c = +prompt("Informe o valor C:")
 
-function calculoDelta (a,b,c) {
+function calculoDelta (a, b, c) {
 
     let delta = (b** 2) - 4 * a * c
 
@@ -377,9 +377,9 @@ function calculoDelta (a,b,c) {
 
 }
 
-let delta = calculoDelta (a,b,c)
+let delta = calculoDelta (a, b, c)
 
-function calculoBhaskara(a,b,c,delta) {
+function calculoBhaskara(a, b, c, delta) {
 
     let positivo = ((b * -1) + Math.sqrt(delta)) / (2 * a)
     let negativo = ((b * -1) - Math.sqrt(delta)) / (2 * a)
@@ -390,7 +390,7 @@ function calculoBhaskara(a,b,c,delta) {
 
 }
 
-delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calculoBhaskara(a,b,c,delta))
+delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calculoBhaskara(a, b, c, delta))
 
 19)
 
