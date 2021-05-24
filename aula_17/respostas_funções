@@ -286,35 +286,6 @@ for(let i = 0; i < 50; i++) {
 
 valorPontas()
 
-Ou
-
-"use strict"
-
-let maior = array[0]
-let menor = array[0]
-
-function valorPontas() {
-
-    for(let i = 0; i < 50; i++) {
-        
-        if(array[i] > maior) maior = array[i]
-
-        if (array[i] < menor) menor = array[i]
-
-    }
-
-    console.log(`O maior número do array é ${maior} enquanto que o menor é ${menor}`)
-
-}
-
-let array = []
-
-for(let i = 0; i < 50; i++) {
-    array[i] = Math.floor(Math.random() * (1001 - 1)) + 1
-}
-
-valorPontas()
-
 13)
 
 function idade() {
