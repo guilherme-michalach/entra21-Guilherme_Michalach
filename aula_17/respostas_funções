@@ -362,6 +362,8 @@ console.log(vetorModificado)
 18) Arrumar console pra mostrar de forma decente
 Fazer de mais uma forma
 
+"use strict"
+
 let a = +prompt("Informe o valor A:")
 let b = +prompt("Informe o valor B:")
 let c = +prompt("Informe o valor C:")
