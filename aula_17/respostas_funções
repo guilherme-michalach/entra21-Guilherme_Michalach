@@ -290,8 +290,8 @@ Ou
 
 "use strict"
 
-let maior = 50
-let menor = 50
+let maior = array[0]
+let menor = array[0]
 
 function valorPontas() {
 
@@ -310,7 +310,7 @@ function valorPontas() {
 let array = []
 
 for(let i = 0; i < 50; i++) {
-    array[i] = Math.floor(Math.random() * (101 - 1)) + 1
+    array[i] = Math.floor(Math.random() * (1001 - 1)) + 1
 }
 
 valorPontas()
