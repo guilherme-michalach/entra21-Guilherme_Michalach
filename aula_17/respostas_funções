@@ -138,9 +138,34 @@ Ou
 
 
 
-9)
+9) corrigir primeiro prompt
 
+"use strict"
 
+let qtd = []
+let amostra = []
+
+for (let i = 0; i < 2; i++){
+
+    if (qtd[i] === 0){
+        qtd[i] = prompt("Informe a palavra")
+    } else {
+        qtd[i] = prompt("Informe o número de vezes que se repetirá")
+    }
+
+}
+
+function isQuantity(elemento, qtd) {
+
+    for (let i = 0; i < qtd; i++){
+        amostra.push(elemento)
+    }
+
+}
+
+isQuantity(qtd[0], qtd[1])
+
+console.log(amostra)
 
 10)
 
@@ -334,7 +359,96 @@ console.log(vetor)
 console.log("Após a ordenação:")
 console.log(vetorModificado)
 
-18)
+18) Arrumar console pra mostrar de forma decente
+Fazer de mais uma forma
+
+let a = +prompt("Informe o valor A:")
+let b = +prompt("Informe o valor B:")
+let c = +prompt("Informe o valor C:")
+
+function calculoDelta (a,b,c) {
+
+    let delta = (b** 2) - 4 * a * c
+
+    return(delta)
+
+}
+
+delta = calculoDelta (a,b,c)
+
+function calculoBhaskara (a,b,c,delta) {
+
+    let positivo = ((b) * -1 + Math.sqrt(delta)) / (2 * a)
+    let negativo = ((b) * -1 - Math.sqrt(delta)) / (2 * a)
 
 
+
+    return(`As raizes são ${positivo.toFixed(2)} e ${negativo.toFixed(2)}`)
+
+}
+
+delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calculoBhaskara(a,b,c,delta))
+
+19)
+
+"use strict"
+
+let vetor = []
+
+for (let i = 0; i < 50; i++) {
+
+    vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
+
+}
+function isPares(vetor) {
+
+    let pares = []
+
+    for(let i = 0; i < 50; i++) {
+
+        if((vetor[i] % 2 === 0) && (i % 2 === 0)){
+            pares.push(vetor[i])
+        }
+    }
+
+    return pares
+
+}
+console.log(isPares(vetor))
+
+20)
+
+"use strict"
+
+let numero = +prompt("Informe um numero")
+
+function israndom(num) {
+
+    let random = Math.floor(Math.random() * (10 - 1)) + 1
+
+    if(random == num) {
+        return `Parabéns! O número sorteado foi o ${random}!`
+    }
+
+    return `Que pena! O número sorteado foi o ${random}!`
+
+}
+
+console.log(israndom(numero))
+
+21)
+
+"use strict"
+
+let valorAno = +prompt("Informe o ano:")
+
+function isBissexto(valorAno) {
+
+    if (valorAno % 4 == 0 && (valorAno % 100 != 0 || valorAno % 400 == 0)) {
+        return true  
+    }
+    
+}
+
+isBissexto(valorAno) ? console.log(`O ano ${valorAno} é bissexto`) : console.log(`O ano ${valorAno} não é bissexto`)
 
