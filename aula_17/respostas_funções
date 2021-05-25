@@ -286,7 +286,7 @@ for(let i = 0; i < 50; i++) {
 
 valorPontas()
 
-13)
+13) Fazer com arrow function também
 
 function idade() {
 
@@ -324,6 +324,7 @@ function divisores() {
 }
 
 let valor = +prompt("Insira um valor inteiro positivo:")
+if (valor != parseInt(valor) || isNaN(valor)) console.log("Número inválido")
 let qtd = 0
 
 divisores(valor)
@@ -340,11 +341,12 @@ function divisores() {
         valor *= i
     }  
 
-    console.log(`O resultado do fatorail de ${inicial} é: ${valor}`)
+    console.log(`O resultado do fatorial de ${inicial} é: ${valor}`)
 
 }
 
 let valor = +prompt("Insira um valor inteiro positivo:")
+if (valor != parseInt(valor) || isNaN(valor)) console.log("Número inválido")
 divisores()
 
 16)
@@ -368,6 +370,35 @@ function valorPerfeito(valor) {
             :
         console.log(`O número ${valor} não é um valor perfeito`)
 
+}
+
+let valor = +prompt("Insira um valor:")
+valorPerfeito(valor)
+
+Ver pra salvar melhor o vetor
+
+"use strict"
+
+function valorPerfeito(valor) {
+
+    let umValor = 0
+    let divisores = []
+
+    for (let i = 1; i <= valor / 2; i++) {
+
+        if (valor % i == 0) {
+            umValor += i
+            divisores[i] = i
+        }
+
+    }
+
+    umValor === valor & umValor !== 0 ? 
+        console.log(`O número ${valor} é um valor perfeito`) 
+            :
+        console.log(`O número ${valor} não é um valor perfeito`)
+
+    console.log(divisores)
 }
 
 let valor = +prompt("Insira um valor:")
@@ -419,6 +450,7 @@ console.log(vetorModificado)
 
 18) Arrumar console pra mostrar de forma decente
 Fazer de mais uma forma
+Fazer da opção de delta sendo 0
 
 "use strict"
 
@@ -482,19 +514,18 @@ console.log(isPares(vetor))
 
 let numero = +prompt("Informe um numero")
 
-function israndom(num) {
+function isRandom(num) {
 
-    let random = Math.floor(Math.random() * (10 - 1)) + 1
+    let random = Math.floor(Math.random() * (11 - 1)) + 1
 
-    if(random == num) {
-        return `Parabéns! O número sorteado foi o ${random}!`
-    }
-
-    return `Que pena! O número sorteado foi o ${random}!`
+    return random == num ?
+        `Parabéns! O número sorteado foi o ${random}!`
+    :
+        `Que pena! O número sorteado foi o ${random}!`
 
 }
 
-console.log(israndom(numero))
+console.log(isRandom(numero))
 
 21)
 
