@@ -1,0 +1,28 @@
+git config --global user.name "nome"
+git config --global user.email "guilhermemichalach@gmail.com"
+git config --global --list - ver nome e e-mail
+
+git clone - clona Repositório
+
+git commit -a -m "mensagem" - se ja tiver modificação no arquivo funciona
+
+git add .
+git commit -m "mensagem"
+git push
+
+git log - ver commits, sai teclando a letra "q"
+git reset hash --hard ou --soft // hard se livra dos arquivos, soft não
+
+git status - vê a branch que tá e se ta na frente ou não em commits
+git branch - vê as branchs existentes e a que você está
+git branch nome - cria nova branch
+git checkout -b nome-branch - cria nova branch e entra nela já
+
+git checkout nome-branch - muda para a branch que tem o nome em questão
+
+git branch -D nome-branch - deleta a branch que for colocado o nome
+
+git push (origin geralmente) nome-branch - para dar push na branch que queremos
+o origin seria o link
+git remote para ver os links
+

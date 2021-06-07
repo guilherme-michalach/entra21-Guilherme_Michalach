@@ -1,6 +1,7 @@
 1)
 
 "use strict"
+
 let numero = +prompt("Insira um número")
 
 function verificarPositivo(numero) {
@@ -12,6 +13,7 @@ console.log(verificarPositivo(numero))
 Ou
 
 "use strict"
+
 let numero = +prompt("Insira um número")
 
 function verificarPositivo(numero) {
@@ -26,6 +28,7 @@ console.log(verificarPositivo(numero))
 Ou
 
 "use strict"
+
 let ehPositivo = numero => numero >= 0
 
 let numero = +prompt("Insira um número")
@@ -35,6 +38,7 @@ console.log(ehPositivo(numero))
 2)
 
 "use strict"
+
 let isMinimo = (a, b) => a < b ? a : b
 
 let a = +prompt("Insira o número A:")
@@ -45,6 +49,7 @@ console.log(`O menor valor entre ${a} e ${b} é: ${isMinimo(a, b)}`)
 3)
 
 "use strict"
+
 let isElevado = (a, b) => a**b
 
 let a = +prompt("Insira o número A:")
@@ -55,7 +60,8 @@ console.log(`A potenciação de ${a} elevado à ${b} é: ${isElevado(a, b)}`)
 4)
 
 "use strict"
-let isMedia = (mediaTotal) => mediaTotal / 3 
+
+let isMedia = mediaTotal => mediaTotal / 3 
 
 let mediaTotal = 0
 for(let i = 0; i < 3; i++) {
@@ -63,9 +69,11 @@ for(let i = 0; i < 3; i++) {
 }
 
 console.log(`A média das três notas é: ${isMedia(mediaTotal)}`)
+
 5)
 
 "use strict"
+
 function ismedia(media) {
 
     if (0 <= media && media < 5) {
@@ -85,9 +93,11 @@ let media = +prompt("Insira a média do aluno:")
 
 ismedia(media)
 
-6) Fazer com ternário também depois
+6) Alteração virgula pra ponto ver depois com o replace
+Segunda forma tornar switch
 
 "use strict"
+
 function isIdeal (sexo, altura) {
     if (sexo == "H") {
         console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
@@ -98,12 +108,35 @@ function isIdeal (sexo, altura) {
     }
 }
 
-let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M")
-let altura = +prompt("Insira sua altura em metro:")
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M").toUpperCase()
+let altura = prompt("Insira sua altura em metro:")
+altura = +altura.replace(",", ".")
+
+isIdeal(sexo, altura)
+
+Ou
+
+"use strict"
+
+function isIdeal (sexo, altura) {
+
+    sexo === "H" ? 
+        console.log(`Seu peso ideal é: ${(62.1 * altura - 44.7).toFixed(2)} KG`)
+            :
+        console.log(`Seu peso ideal é: ${(72.7 * altura - 58).toFixed(2)} KG`)
+
+}
+
+let sexo = prompt("Insira a inicial de seu sexo/gênero:\nExemplo: H/M").toUpperCase()
+let altura = prompt("Insira sua altura em metro:")
+altura = +altura.replace(",", ".")
+
+isIdeal(sexo, altura)
 
 7)
 
 "use strict"
+
 function isArray () {
     console.log(`Primeiro número do Array: ${array[0]}`)
     console.log(`Último número do Array: ${array[array.length - 1]}`)
@@ -112,9 +145,9 @@ function isArray () {
 let array = []
 
 while(true) {
-    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -123") 
+    let numero = +prompt("Insira um número\nSe quiser parar a inserção, digite -12345") 
 
-    if(numero == -123) {
+    if(numero == -12345) {
         break
     }
 
@@ -124,9 +157,10 @@ while(true) {
 
 isArray()
 
-8) Fazer de mais uma forma, que essa é meio roubada
+8)
 
 "use strict"
+
 function isQuantity() {
     console.log("#".repeat(numero))
 }
@@ -136,9 +170,24 @@ isQuantity()
 
 Ou
 
+"use strict"
 
+function isQuantity(numero) {
 
-9) corrigir primeiro prompt
+    for(let i = 0; i < numero; i++) {
+        vetor.push("#")
+    }
+
+}
+
+let numero = +prompt("Insira um número positivo")
+let vetor = []
+
+isQuantity(numero)
+
+console.log((vetor).toString())
+
+9)
 
 "use strict"
 
@@ -147,11 +196,9 @@ let amostra = []
 
 for (let i = 0; i < 2; i++){
 
-    if (qtd[i] === 0){
-        qtd[i] = prompt("Informe a palavra")
-    } else {
-        qtd[i] = prompt("Informe o número de vezes que se repetirá")
-    }
+    if(i < 1) qtd[i] = prompt("Insira a palavra")
+    
+    if (i > 0) qtd[i] = +prompt("Insira o número de vezes que será repetido o elemento")
 
 }
 
@@ -182,6 +229,20 @@ let ano = +prompt("Insira o ano em que você nasceu:")
 isIdade()
 console.log(idade)
 
+Forma que deixa menos variaveis globais
+
+"use strict"
+
+function isIdade() {
+    let anoAtual = new Date().getFullYear()
+    let idade = anoAtual - ano
+
+    console.log(idade)
+}
+
+let ano = +prompt("Insira o ano em que você nasceu:")
+isIdade()
+
 11)
 
 "use strict"
@@ -203,7 +264,7 @@ alterar()
 console.log(`Vetor original : ${vetor}`)
 console.log(`Vetor modificado : ${vetorModificado}`)
 
-12) Fazer de outra forma também
+12)
 
 "use strict"
 
@@ -214,19 +275,18 @@ function valorPontas() {
     let maior = array[0],
         menor = array[49]
 
-    console.log(`O maior número do array é: ${maior} enquanto que o menor é ${menor}`)
+    console.log(`O maior número do array é ${maior} enquanto que o menor é ${menor}`)
 }
 
 let array = []
 
-
 for(let i = 0; i < 50; i++) {
-    array[i] = Math.floor(Math.random() * (101 - 1)) + 1
+    array[i] = Math.floor(Math.random() * (1001 - 1)) + 1
 }
 
 valorPontas()
 
-13)
+13) Fazer com arrow function também
 
 function idade() {
 
@@ -264,6 +324,7 @@ function divisores() {
 }
 
 let valor = +prompt("Insira um valor inteiro positivo:")
+if (valor != parseInt(valor) || isNaN(valor)) console.log("Número inválido")
 let qtd = 0
 
 divisores(valor)
@@ -280,11 +341,12 @@ function divisores() {
         valor *= i
     }  
 
-    console.log(`O resultado do fatorail de ${inicial} é: ${valor}`)
+    console.log(`O resultado do fatorial de ${inicial} é: ${valor}`)
 
 }
 
 let valor = +prompt("Insira um valor inteiro positivo:")
+if (valor != parseInt(valor) || isNaN(valor)) console.log("Número inválido")
 divisores()
 
 16)
@@ -303,10 +365,40 @@ function valorPerfeito(valor) {
 
     }
 
-    if (umValor === valor && umValor !== 0) {
-        console.log(`O número ${valor} é um valor perfeito`)
-    } else console.log(`O número ${valor} não é um valor perfeito`)
+    umValor === valor & umValor !== 0 ? 
+        console.log(`O número ${valor} é um valor perfeito`) 
+            :
+        console.log(`O número ${valor} não é um valor perfeito`)
 
+}
+
+let valor = +prompt("Insira um valor:")
+valorPerfeito(valor)
+
+Ver pra salvar melhor o vetor
+
+"use strict"
+
+function valorPerfeito(valor) {
+
+    let umValor = 0
+    let divisores = []
+
+    for (let i = 1; i <= valor / 2; i++) {
+
+        if (valor % i == 0) {
+            umValor += i
+            divisores[i] = i
+        }
+
+    }
+
+    umValor === valor & umValor !== 0 ? 
+        console.log(`O número ${valor} é um valor perfeito`) 
+            :
+        console.log(`O número ${valor} não é um valor perfeito`)
+
+    console.log(divisores)
 }
 
 let valor = +prompt("Insira um valor:")
@@ -326,9 +418,7 @@ function alterar() {
 let vetor = []
 
 for(let i = 0; i < 50; i++) {
-
 vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
-
 }
 
 alterar()
@@ -347,13 +437,12 @@ let vetor = []
 let vetorModificado = []
 
 for(let i = 0; i < 50; i++) {
-
     vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
     vetorModificado[i] = vetor[i]
-
 }
 
 alterar()
+
 console.log("Antes da ordenação:")
 console.log(vetor)
 console.log("Após a ordenação:")
@@ -361,6 +450,7 @@ console.log(vetorModificado)
 
 18) Arrumar console pra mostrar de forma decente
 Fazer de mais uma forma
+Fazer da opção de delta sendo 0
 
 "use strict"
 
@@ -368,7 +458,7 @@ let a = +prompt("Informe o valor A:")
 let b = +prompt("Informe o valor B:")
 let c = +prompt("Informe o valor C:")
 
-function calculoDelta (a,b,c) {
+function calculoDelta (a, b, c) {
 
     let delta = (b** 2) - 4 * a * c
 
@@ -376,12 +466,12 @@ function calculoDelta (a,b,c) {
 
 }
 
-delta = calculoDelta (a,b,c)
+let delta = calculoDelta (a, b, c)
 
-function calculoBhaskara (a,b,c,delta) {
+function calculoBhaskara(a, b, c, delta) {
 
-    let positivo = ((b) * -1 + Math.sqrt(delta)) / (2 * a)
-    let negativo = ((b) * -1 - Math.sqrt(delta)) / (2 * a)
+    let positivo = ((b * -1) + Math.sqrt(delta)) / (2 * a)
+    let negativo = ((b * -1) - Math.sqrt(delta)) / (2 * a)
 
 
 
@@ -389,7 +479,7 @@ function calculoBhaskara (a,b,c,delta) {
 
 }
 
-delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calculoBhaskara(a,b,c,delta))
+delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calculoBhaskara(a, b, c, delta))
 
 19)
 
@@ -397,7 +487,7 @@ delta < 0 ? console.log("O resultado de Delta é negativo!") : console.log(calcu
 
 let vetor = []
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 10; i++) {
 
     vetor[i] = Math.floor(Math.random() * (51 - 1)) + 1
 
@@ -406,7 +496,7 @@ function isPares(vetor) {
 
     let pares = []
 
-    for(let i = 0; i < 50; i++) {
+    for(let i = 0; i < 10; i++) {
 
         if((vetor[i] % 2 === 0) && (i % 2 === 0)){
             pares.push(vetor[i])
@@ -424,19 +514,18 @@ console.log(isPares(vetor))
 
 let numero = +prompt("Informe um numero")
 
-function israndom(num) {
+function isRandom(num) {
 
-    let random = Math.floor(Math.random() * (10 - 1)) + 1
+    let random = Math.floor(Math.random() * (11 - 1)) + 1
 
-    if(random == num) {
-        return `Parabéns! O número sorteado foi o ${random}!`
-    }
-
-    return `Que pena! O número sorteado foi o ${random}!`
+    return random == num ?
+        `Parabéns! O número sorteado foi o ${random}!`
+    :
+        `Que pena! O número sorteado foi o ${random}!`
 
 }
 
-console.log(israndom(numero))
+console.log(isRandom(numero))
 
 21)
 
