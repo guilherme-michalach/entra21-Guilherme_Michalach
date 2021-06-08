@@ -1,0 +1,19 @@
+.inicio {
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+}
+
+p {
+    /* text-align: justify; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.regras {
+    font-size: 20px;
+    text-align: center;
+}

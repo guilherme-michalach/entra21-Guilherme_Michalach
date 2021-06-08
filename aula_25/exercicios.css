@@ -1,0 +1,54 @@
+.textos {
+    font-size: 20px;
+}
+
+.nacionais {
+    background-color: darkcyan;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.primeiraLinha {
+    background-color: #C4C2C2;
+    text-align: center;
+    border: 1px solid #ccc7c7;
+    font-size: 18px;
+}
+
+.legenda {
+    background-color: rgba(29, 254, 159);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.tabelinha {
+    border-top: 1px ridge #ccc7c7;
+    border-left: 1px ridge #ccc7c7;
+    text-align: left;
+    padding: 5px 10px 5px 1px;
+}
+
+/* .tabelinha2 {
+    border-top: 1px ridge #ccc7c7;
+    border-left: 1px ridge #ccc7c7;
+    padding: 2px 1px 2px 10px;
+} */
+
+.tabelinha3 {
+    border-bottom: 1px ridge #ccc7c7;
+    border-right: 1px ridge #ccc7c7;
+}
+
+.tabelinha4 {
+    border-top: 1px ridge #ccc7c7;
+    border-left: 1px ridge #ccc7c7;
+    text-align: right;
+    padding: 5px 1px 5px 60px;
+}
+
+.tabelinha5 {
+    border-top: 1px ridge #ccc7c7;
+    border-left: 1px ridge #ccc7c7;
+    text-align: center;
+    padding: 5px 1px 5px 1px;
+}

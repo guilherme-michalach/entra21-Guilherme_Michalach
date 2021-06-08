@@ -26,3 +26,12 @@ git push (origin geralmente) nome-branch - para dar push na branch que queremos
 o origin seria o link
 git remote para ver os links
 
+git remote add upstream url repositório principal
+git remote -v
+status
+
+git fetch upstream
+
+git merge upstream/main - da um merge do seu arquivo com alterações da upstream
+
+git push origin medias
