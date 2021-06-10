@@ -52,3 +52,39 @@
     text-align: center;
     padding: 5px 1px 5px 1px;
 }
+
+.cinco {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(20, 167, 106);
+    /* mudar background depois */
+    padding: 5px 20px 5px 20px;
+    width: 300px;
+    
+}
+
+.texto {
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(186, 199, 207);
+    font-size: 18px;
+    width: 300px;
+    font-weight: 100;
+}
+
+.titulos {
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(152, 183, 202);
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
+}
+
+.tabela {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	float: none;
+}
+
