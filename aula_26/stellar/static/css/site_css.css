@@ -11,41 +11,103 @@ body {
     font-family: "Source Sans Pro", "Helvetica", "sans-serif";
     font-size: 18px;
     background-color: #935D8C;
+    background-image: url(images/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-repeat: no-repeat;
+    /* height: 100vh; sempre bom lembrar */
+    background-attachment: fixed;
+    line-height: 1.65;
 }
 
-/* .wrapper {
+.wrapper {
+    width: 95%;
+    margin: auto;
+}
 
-} */
+h1, h2, h3, h4, h5, h6, p, a {
+    font-weight: 300;
+}
 
 .alt {
     text-align: center;
-    color: white;
     padding: 96px 64px 48px;
 }
 
+.alt h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0 0 13px;
+}
+
 #header p {
-    font-size: 1.25em;
-    letter-spacing: -0.025em;
+    font-size: 23px;
+    letter-spacing: -0.4px;
     color: #FFFFFFA6;
 }
 
-a {
+.main_link {
     color: inherit;
     text-decoration: none;
     border-bottom: dotted 1px;
 }
 
-a:hover {
+.main_link:hover {
     border: 0;
     color: white;
 }
 
+.link {
+    color: inherit;
+    text-decoration: none;
+}
 
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #636363;
+    position: absolute;
+    width: 64em;
+    /* width 100%?
+    como alinhar essa nav do tamanho que ta o site original?
+     */
+    max-width: calc(100% - 4em);
+    padding: 18px;
+    background-color: #f7f7f7;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    cursor: default;
+    text-align: center;
+    /* text-align: center; */
+}
 
+li {
+    display: inline-block;
+}
 
+ul {
+    display: block;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
 
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
+#nav ul li {
+    transition: margin 0.2s ease;
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0;
+    vertical-align: middle;
+}
 
+/* ver como reduzir esses navs, uls e lis */
 
 
 
