@@ -1,26 +1,30 @@
-/* .centro {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 body {
     font-family: "Source Sans Pro", "Helvetica", "sans-serif";
     font-size: 18px;
-    background-color: #935D8C;
     background-image: url(images/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
     background-repeat: no-repeat;
     /* height: 100vh; sempre bom lembrar */
     background-attachment: fixed;
     line-height: 1.65;
+    height: 100vh;
+    margin-left: 226px;
+    margin-right: 226px;
+    text-align: center;
+    /* border-left-width: 10%;
+    border-right-width: 90%; */
 }
 
 .wrapper {
-    width: 95%;
-    margin: auto;
+    margin: 0 auto;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    width: 64em;
+    max-width: calc(100%- 4em);
+    display: inline-block;
+    justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -30,6 +34,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .alt {
     text-align: center;
     padding: 96px 64px 48px;
+    width: 1194px;
 }
 
 .alt h1 {
@@ -61,23 +66,19 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 #nav {
-    display: flex;
-    align-items: center;
+    display: block;
+    align-items: space-around;
     justify-content: center;
     color: #636363;
     position: absolute;
-    width: 64em;
-    /* width 100%?
-    como alinhar essa nav do tamanho que ta o site original?
-     */
-    max-width: calc(100% - 4em);
+    width: 1194px;
+    /* max-width: calc(100% - 4em); */
     padding: 18px;
-    background-color: #f7f7f7;
-    border-top-left-radius: 0.25em;
-    border-top-right-radius: 0.25em;
+    background-color: #ffffff;
+    /* border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em; */
     cursor: default;
     text-align: center;
-    /* text-align: center; */
 }
 
 li {
@@ -91,12 +92,14 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    /* width: 100%; */
 }
 
 #nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    align-content: space-around;
 }
 
 #nav ul li {
@@ -109,6 +112,9 @@ ul {
 
 /* ver como reduzir esses navs, uls e lis */
 
+/* *, *:before, *:after {
+    box-sizing: inherit;
+} */
 
 
 

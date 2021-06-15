@@ -1,0 +1,46 @@
+
+body {
+    background-image: url(images/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.alt {
+    padding: 96px 64px 48px;
+}
+
+h1 {
+    margin: 0 0 15px;
+}
+
+h2 {
+    margin: 0px 0px 26.1333px;
+}
+
+p {
+    margin: 0px 0px 0px;
+}
+
+.main_link {
+    border-bottom: dotted 1px;
+}
+
+.main_link:hover {
+    border: 0;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#nav ul li a {
+    padding: 20px;
+    display: inline;
+}
+
+.icons {
+    display: inline;
+}
