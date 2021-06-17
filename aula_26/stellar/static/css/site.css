@@ -1,3 +1,6 @@
+html {
+    box-sizing: border-box;
+}
 
 body {
     background-image: url(images/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
@@ -10,6 +13,10 @@ body {
     padding: 96px 64px 48px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.7em 0;
+}
+
 h1 {
     margin: 0 0 15px;
 }
@@ -19,7 +26,7 @@ h2 {
 }
 
 p {
-    margin: 0px 0px 0px;
+    margin: 0 0 2em 0;
 }
 
 .main_link {
@@ -30,17 +37,39 @@ p {
     border: 0;
 }
 
-#nav ul li {
-    display: inline;
-    margin: 0 auto;
-    padding: 0;
+a {   
+    border-radius: 12px;
+}
+
+#nav {
+    background-color: #F7F7F7;
+    justify-content: space-between;
 }
 
 #nav ul li a {
     padding: 20px;
     display: inline;
+    float: inherit;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.active {
+    background-color: #FFFFFF;
 }
 
 .icons {
     display: inline;
 }
+
+.mouse:hover {
+    background-color: #d4d4d4da;
+}
+
+
+
