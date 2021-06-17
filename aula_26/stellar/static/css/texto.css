@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header p {
-    font-size: 23px;
+    font-size: 28px;
     letter-spacing: -0.4px;
     color: #FFFFFFA6;
 }
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font: 60px "Source Sans Pro";
+    font: 73px "Source Sans Pro";
     color: white;
 }
 
@@ -81,6 +81,10 @@ em, i {
     text-decoration: none;
 }
 
+.content {
+    font: 18.6px "Source Sans Pro";    
+}
+
 .button {
     font: 22.6px "Source Sans Pro";
     color: #636363;
@@ -91,5 +95,5 @@ em, i {
 .major_text {
     font: 22.6px "Source Sans Pro";
     color: #636363;
-    
+
 }

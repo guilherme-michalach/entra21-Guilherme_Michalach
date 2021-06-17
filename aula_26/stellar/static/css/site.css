@@ -5,10 +5,9 @@ html {
 body {
     background-image: url(images/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
+    /* background-attachment: fixed; */
+    height: 100%;
 }
-
 
 .wrapper {
     background-color: #FFFFFF;
@@ -20,6 +19,10 @@ body {
     text-align: center;
 }
 
+#header.alt {
+    padding: 158px 113px 90px;
+}
+
 .alt {
     padding: 96px 64px 48px;
 }
@@ -29,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin: 0 0 15px;
+    margin: 0 0 18px;
 }
 
 h2 {
@@ -37,7 +40,7 @@ h2 {
 }
 
 p {
-    margin: 0 0 32px 0;
+    margin: 0 0 56.6px 0;
 }
 
 .main_link {
@@ -56,7 +59,11 @@ a {
     background-color: #F7F7F7;
     margin-left: 10%;
     margin-right: 10%;
-    padding: 64px 48px 32px;
+    padding: 64px 48px 32px; 
+}
+
+#intro.main {
+    padding: 113px 113px 68px;
 }
 
 header.major h2::after {
@@ -66,7 +73,7 @@ display: block;
     height: 2px;
     margin: 0.7em 0 1em 0;
     border-radius: 2px;
-    background-color: black;
+    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
 #nav {
@@ -127,9 +134,21 @@ ul {
     margin-bottom: 45px;
 }
 
-.image {
-    border-radius: 50%;
+/* VER FLEXBOX NO LUGAR DE GRID
+MUITO MENOS TRAMPO
+
+https://www.felipefialho.com/blog/css-grid-e-flexbox-quando-utilizar/
+*/
+
+.major_text {
+    margin-bottom: 45px;
+}
+
+span.image {
+    padding: 14px;
     text-align: center;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .spot_img {
