@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     line-height: 1.5;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.4px;
 }
 
 #header p {
@@ -33,13 +33,13 @@ h1 {
 }
 
 h2 {
-    font: 37.3px "Source Sans Pro";
+    font: 37px "Source Sans Pro";
     color: #636363;
 }
 
 p {
     color: black;
-    font: 18.6667px "Source Sans Pro";
+    font: 18.6px "Source Sans Pro";
 }
 
 strong, b {
@@ -51,9 +51,10 @@ em, i {
 }
 
 #nav {
-    font: 18.6667px "Source Sans Pro";
+    font: 18.6px "Source Sans Pro";
     padding: 16px;
     text-align: center;
+    color: #636363;
 }
 
 #nav ul li a {
@@ -80,3 +81,15 @@ em, i {
     text-decoration: none;
 }
 
+.button {
+    font: 22.6px "Source Sans Pro";
+    color: #636363;
+    text-align: center;
+    text-decoration: none;
+}
+
+.major_text {
+    font: 22.6px "Source Sans Pro";
+    color: #636363;
+    
+}

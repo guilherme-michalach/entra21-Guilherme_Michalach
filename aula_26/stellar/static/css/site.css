@@ -9,12 +9,23 @@ body {
     height: 100vh;
 }
 
+
+.wrapper {
+    background-color: #FFFFFF;
+    margin-right: 10%;
+    margin-left:10%;
+    color: black;
+    font: 18px "Source Sans Pro";
+    padding: 130px 93px 74px;
+    text-align: center;
+}
+
 .alt {
     padding: 96px 64px 48px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 0.7em 0;
+    margin: 0 0 11px 0;
 }
 
 h1 {
@@ -22,11 +33,11 @@ h1 {
 }
 
 h2 {
-    margin: 0px 0px 26.1333px;
+    margin: 0px 0px 26px;
 }
 
 p {
-    margin: 0 0 2em 0;
+    margin: 0 0 32px 0;
 }
 
 .main_link {
@@ -41,22 +52,48 @@ a {
     border-radius: 12px;
 }
 
+.main {
+    background-color: #F7F7F7;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 64px 48px 32px;
+}
+
+header.major h2::after {
+display: block;
+    content: '';
+    width: 3.25em;
+    height: 2px;
+    margin: 0.7em 0 1em 0;
+    border-radius: 2px;
+    background-color: black;
+}
+
 #nav {
     background-color: #F7F7F7;
     justify-content: space-between;
+    width: inherit;
+    /* max-width: calc(100% - 64px); */
+    padding: 16px;
+    cursor: default;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+ul {
+    margin: 0;
 }
 
 #nav ul li a {
-    padding: 20px;
+    padding: 0 20px;
     display: inline;
-    float: inherit;
+    /* float: inherit; */
 }
 
 #nav ul li {
     display: inline;
     margin: 0 auto;
     padding: 0;
-
 }
 
 .active {
@@ -67,9 +104,48 @@ a {
     display: inline;
 }
 
+.actions {
+    list-style-type: none;
+}
+
+.button {
+    text-decoration: none;
+    border-radius: 8px;
+    border: 0;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 34px;
+    background-color: #5f4d93;
+    display: inline-block;
+    min-width: 6em;
+    /* white-space: nowrap; */
+}
+
+.spotlight {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-bottom: 45px;
+}
+
+.image {
+    border-radius: 50%;
+    text-align: center;
+}
+
+.spot_img {
+    border-radius: 100%;
+    background-color:black;
+    width: 20em;
+    display: block;
+}
+
 .mouse:hover {
     background-color: #d4d4d4da;
 }
 
-
-
+section {
+    vertical-align: baseline;
+    box-sizing: inherit;
+    border: 0;
+    margin: 0;
+}
