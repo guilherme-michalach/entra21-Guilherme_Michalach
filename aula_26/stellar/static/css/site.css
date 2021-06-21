@@ -72,8 +72,26 @@ display: block;
     width: 3.25em;
     height: 2px;
     margin: 0.7em 0 1em 0;
+    /* 0.7em auto 1em    */
     border-radius: 2px;
     background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
+
+#major2 {
+    text-align: center;
+}
+
+#first {
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 33.3% 33.4% 33.3%;
+}
+
+#icon {
+    
 }
 
 #nav {
