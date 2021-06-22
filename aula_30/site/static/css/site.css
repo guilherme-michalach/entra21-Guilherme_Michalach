@@ -8,8 +8,8 @@
 html {
     font-family: 'Merriweather', serif;
     font-size: 16px;
-    /* background: linear-gradient(45deg, #d3cce3, #e9e4f0); */
-    background-color: brown;
+    background: linear-gradient(45deg, #d3cce3, #e9e4f0);
+    /* background-color: brown; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-color: red; */
@@ -205,4 +205,23 @@ h2 {
     height: 1.5em;
     text-align: center;
     line-height: 1.5em;
+}
+
+.place {
+    width: 300px;
+    border-radius: 1.75em;
+    margin-bottom: 0.8em;
+    border: 1px solid black;
+}
+
+.callback {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 5%;
+    margin-bottom: 0;
+    padding-top: 3em;
+}
+
+.places_header {
+    margin-top: 0.5em;
 }
