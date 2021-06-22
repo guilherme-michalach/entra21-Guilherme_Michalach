@@ -90,10 +90,6 @@ display: block;
     grid-template-columns: 33.3% 33.4% 33.3%;
 }
 
-#icon {
-    
-}
-
 #nav {
     background-color: #F7F7F7;
     justify-content: space-between;
