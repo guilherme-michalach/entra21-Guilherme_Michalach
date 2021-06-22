@@ -8,25 +8,14 @@
 <body>
     <script>
 "use strict"
-let valores = [];
-        for (let i = 0; i < 3; i++){
-            valores[i] = +prompt(`Informe o ${i + 1}º parâmetro`);
-        }
-        function bhaskara(parametros){
-            let delta = (parametros[1] ** 2 - 4 * parametros[0] * parametros[2]),
-                raizes = [];
+let resultado = ""
+let numero = +prompt("Digite um número:")
 
-            if (delta < 0){
-                return "Cálculo impossível";
-            }
-            
-            raizes[0] = (-parametros[1] + delta) / 2 * parametros[0];
-            raizes[1] = (-parametros[1] - delta) / 2 * parametros[0];
+for (let i = 0; i <= numero; i += 2) {
+    resultado += i
+    console.log(resultado)
+}
 
-            return raizes;
-        }
-
-        console.log(bhaskara(valores));
     </script>
 </body>
 </html>

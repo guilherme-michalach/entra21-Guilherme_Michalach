@@ -8,8 +8,10 @@
 html {
     font-family: 'Merriweather', serif;
     font-size: 16px;
-    /* background: linear-gradient(45deg, #d3cce3, #e9e4f0); */
-    background-color: red;
+    background: linear-gradient(45deg, #d3cce3, #e9e4f0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-color: red; */
     z-index: 100;
 }
 
@@ -30,7 +32,7 @@ header {
 
 #nav ul li {
     display: inline-block;
-    background-color: yellow;
+    /* background-color: yellow; */
     position: sticky;
     z-index: 99;
     top: 0;
@@ -55,6 +57,7 @@ a {
     text-decoration: none;
     font-size: 1.5em;
     border-radius: 100%;
+    color: black;
 }
 
 .main_link {
@@ -62,16 +65,21 @@ a {
 }
 
 #main_1 {
-    padding: 0 .5em;
-    border-radius: 12px;
-    border-style: none;
-    border-width: 1px;
+    padding: 0 .5em 0 0.5em;
+    font-size: 1.06em;
 }
 
 #main_1:last-child {
-    float: center;
-    margin-left: 1em;
+    float: right;
 }
+
+/* #main_1:nth-child(2) {
+    display: none;
+}
+Editar melhor pra aumentar os outros dois enquanto esses não são visiveis, de certo só aumentar eles e corrigir isso em outras resoluções
+#main_1:nth-child(3) {
+    display: none;
+} */
 
 .icon {
     display: block;
@@ -80,16 +88,50 @@ a {
 }
 
 .image {
+    width: 200px;
+    height: 200px;
+    padding: 0.35em;  
+    border: 1px solid black;
     border-radius: 100%;
-    width: fit-content;
+    margin-bottom: 2em;
+}
+
+.image img {
+    display: block; 
+    border-radius: 100%;   
+    width: 12rem;
+    border: 1px solid black;
 }
 
 h1 {
     text-align: center;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px;
+    letter-spacing: 3px;
+    text-shadow: 1px 2px;
+    margin-top: 3rem;
 }
+
+header.major h1::after {
+    display: block;
+        content: '';
+        width: 3.25em;
+        height: 2px;
+        margin: 0 0 1em 0;
+        /* 0.7em auto 1em    */
+        border-radius: 2px;
+        /* talvez background-image com gradiente? */
+        background-color: black;
+        /* margin-left: 35%; */
+    }
 
 h2 {
    padding-bottom: 0.4em; 
+}
+
+.end {
+    margin: 0 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.foot_logo {
+    font-size: 2.5em;
 }
