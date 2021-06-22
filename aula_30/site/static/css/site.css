@@ -14,6 +14,7 @@ html {
     background-attachment: fixed;
     /* background-color: red; */
     z-index: 100;
+    color: #383838;
 }
 
 :root {
@@ -58,7 +59,7 @@ ul {
     text-decoration: none;
     font-size: 1.5em;
     border-radius: 100%;
-    color: black;
+    color: inherit;
 } */
 
 .main_link {
@@ -66,7 +67,7 @@ ul {
     text-decoration: none;
     font-size: 1.5em;
     border-radius: 100%;
-    color: black;
+    color: inherit;
 }
 
 
@@ -111,7 +112,7 @@ Editar melhor pra aumentar os outros dois enquanto esses não são visiveis, de 
     width: 150px;
     height: 150px;
     padding: 0.5em;  
-    border: 3px solid black;
+    border: 3px solid #383838;
     border-radius: 100%;
     margin-bottom: 1.3em;
 }
@@ -120,7 +121,7 @@ Editar melhor pra aumentar os outros dois enquanto esses não são visiveis, de 
     display: block; 
     border-radius: 100%;   
     width: 10rem;
-    border: 1px solid black;
+    border: 1px solid #383838;
 }
 
 h1 {
@@ -143,13 +144,13 @@ h1 {
 .text_link {
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: inherit;
     margin: 1em 0;
     margin-left: 35%;
     margin-right: 35%;
     padding: 0.4em 0.2em;
     display: block;
-    border: 1px solid black;
+    border: 1px solid #383838;
     border-radius: 12px;
 }
 
@@ -166,7 +167,7 @@ h1 {
         0.7em auto 1em   
         border-radius: 2px;
         talvez background-image com gradiente?
-        background-color: black;
+        background-color: inherit;
         margin-left: 35%;
     } */
 
@@ -192,10 +193,10 @@ h2 {
 
 .media__button {
     text-decoration: none;
-    border: 2px solid black;
+    border: 2px solid #383838;
     border-radius: 100%;
     font-size: 2.5em;
-    color: black;
+    color: #383838;
 }
 
 .media__button::before {
@@ -211,7 +212,7 @@ h2 {
     width: 300px;
     border-radius: 1.75em;
     margin-bottom: 0.8em;
-    border: 1px solid black;
+    border: 1px solid #383838;
 }
 
 .callback {
