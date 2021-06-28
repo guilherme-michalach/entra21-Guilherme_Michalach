@@ -244,14 +244,36 @@ h2 {
     color: #ffff;
     opacity: 70%;
     transform: scale(1.12);
+    transition: .5s ease;
 }
 
 .itens_table:hover {
     transform: scale(1.18);
+    transition: .5s ease;
 }
 
 .callback_bottom:hover {
     transform: scale(1.18);
+    transition: .5s ease;
+}
+
+.callback:hover {
+    transform: scale(1.18);
+    position: relative;
+    margin-left: 49%;
+}
+
+i:hover {
+    transform: scale(1.18);
+    transition: .5s ease;   
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.place:hover {
+    transform: scale(1.05);
 }
 
 @media screen and (min-width: 400px) {
@@ -649,13 +671,13 @@ h2 {
 
     .title_idx {
         text-align: right;
-        margin-left: 13.5%;
+        margin-left: 13.4%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 12%;
+        margin-left: 13%;
         align-self: center;
     }
 
@@ -768,13 +790,13 @@ h2 {
 
     .title_idx {
         text-align: right;
-        margin-left: 13.5%;
+        margin-left: 11%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 12%;
+        margin-left: 11%;
         align-self: center;
     }
 
@@ -887,13 +909,13 @@ h2 {
 
     .title_idx {
         text-align: right;
-        margin-left: 11%;
+        margin-left: 12.6%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 9%;
+        margin-left: 11%;
         align-self: center;
     }
 
@@ -1005,13 +1027,13 @@ h2 {
 
     .title_idx {
         text-align: right;
-        margin-left: 11.5%;
+        margin-left: 13.4%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 10%;
+        margin-left: 11%;
         align-self: center;
     }
 
@@ -1100,13 +1122,13 @@ h2 {
 
     .title_idx {
         text-align: left;
-        margin-left: 37%;
+        margin-left: 39%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 9%;
+        margin-left: 8%;
         align-self: center;
     }
 
@@ -1191,19 +1213,19 @@ h2 {
 
     .title_idx {
         text-align: right;
-        margin-left: 10%;
+        margin-left: 10.8%;
         align-self: center;
     }
 
     .title_idx_2 {
         text-align: right;
-        margin-left: 8%;
+        margin-left: 8.6%;
         align-self: center;
     }
 
     .places_title {
         text-align: left;
-        margin-left: 30%;
+        margin-left: 31.8%;
     }
 
     .places_title_2 {
