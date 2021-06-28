@@ -261,6 +261,7 @@ h2 {
     transform: scale(1.18);
     position: relative;
     margin-left: 49%;
+    transition: .5s ease;
 }
 
 i:hover {
