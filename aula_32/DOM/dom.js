@@ -115,18 +115,104 @@
 
 // 14)
 
-let addDiv = document.createElement("div")
-    addDiv.className = "notificacao"
-    addDiv.textContent = "Um alerta simples"
-    //remover esse textContent depois
+// let addDiv = document.createElement("div")
+//     addDiv.className = "notificacao"
+//     // addDiv.textContent = "Olá"
 
-    document.body.append(addDiv)
+//     document.body.append(addDiv)
 
-    addDiv.style.color = 'blue'
-    addDiv.style.top = '10'
-    addDiv.style.right = '10'
-    https://www.w3schools.com/jsref/prop_style_border.asp
+//     let estilo = document.querySelector("div")
 
-    function notificacao() {
-    
-}
+//     estilo.innerHTML = "Olá"
+//     estilo.style.color = 'blue'
+//     estilo.style.position = "relative"
+//     estilo.style.top = 10 + "px"
+//     estilo.style.right = 10 + "px"
+
+// 15)
+
+// "use strict"
+
+// let campo = document.querySelector(".campo")
+// let bola = document.querySelector(".bola")
+
+//     bola.style.left = Math.round(campo.clientWidth / 2 - bola.offsetWidth / 2)
+//     bola.style.top = Math.round(campo.clientHeight / 2 - bola.offsetHeight / 2)
+
+// 16)
+
+// div = document.querySelector("#div-legenda")
+
+// console.log(div.getBoundingClientRect())
+
+// function mostraLegenda(elemento, html = "Teste") {
+//     let p1 = document.createElement("div")
+//         p1.style.textContent = html
+//         p1.style.cssText = "position: absolute; color: green;"
+
+//         let coordenadas = coords(elemento)
+
+//         p1.style.left = coordenadas.left + "px"
+//         p1.style.top = coordenadas.bottom + "px"
+
+//         p1.innerHTML = html
+//         // pra adicionar o texto só quando puxar a função realmente
+
+//         return p1
+// }
+
+// function coords (elemento) {
+//     let coordenadas = elemento.getBoundingClientRect()
+//     // o getBounding sempre retorna o tamanho de um elemento e a posição relativa dele ao viewport / pesquisar mais sobre depois
+
+//     return {
+//         top: coordenadas.top + window.pageYOffset,
+//         right: coordenadas.right + window.pageXOffset,
+//         bottom: coordenadas.bottom + window.pageYOffset,
+//         left: coordenadas.left + window.pageXOffset
+//     }
+// }
+
+//     let p1 = mostraLegenda(div, "Abaixo da div")
+//     document.body.append(p1)
+
+// 17)
+
+// let mago = document.querySelector("#esconder")
+
+// mago.addEventListener("click", shazam)
+
+// let count = 1
+
+// function shazam() {
+//     let selector = document.querySelector("#text")
+//         selector.style.display = "none"
+
+//         count = count + 1
+
+//     if (count % 2 != 0) {
+//         selector.style.display = "block"
+//     }
+// }
+
+// Ou
+
+// let mago = document.querySelector("#esconder")
+
+// mago.addEventListener("click", shazam)
+
+// function shazam() {
+//     let selector = document.querySelector("#text")
+
+//     if (selector.style.visibility === "hidden") {
+//         selector.style.visibility = "visible";
+//       } else {
+//         selector.style.visibility = "hidden";
+//       }
+
+// }
+
+// 18)
+
+
+
