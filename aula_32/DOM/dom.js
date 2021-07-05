@@ -214,5 +214,42 @@
 
 // 18)
 
+// let campo = document.querySelector(".campo"),
+//     bola = document.querySelector(".bola")
 
+// campo.addEventListener("click", (event)
+
+// ver como fazer o resto
+
+// 19)
+
+// let remover = document.querySelector("#container")
+
+// remover.addEventListener("click", (event) => {
+//     let target = event.target 
+//     if (target.tagName != "BUTTON") return
+//     target.parentNode.remove()
+// })
+
+// 20)
+
+// let mago = document.querySelector(".tree")
+
+// function handler (event) {
+//     if (event.type == "mousedown") {
+//         let alvo = event.target
+
+//         if (!alvo.childNodes || alvo.parentElement.tagName == "BODY") return
+//         //!alvo para retornar falso se tiver
+//         let shazam = alvo.childNodes
+
+//         for (let i of shazam) {
+//             i.hidden = !i.hidden
+//         }
+//     }
+// }
+
+// mago.addEventListener("mousedown", handler)
+
+// 21)
 
