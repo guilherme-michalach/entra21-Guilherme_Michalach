@@ -271,12 +271,24 @@ function handler(event) {
     let check2 = corpo[1]
 
     if(clique.dataset.type == "number") {
-        let selecionador = organizador.rows[1].cells[0]
-        console.log("a")
-        let selecionador2 = organizador.rows[2].cells[1]
+        let selecionador = organizador.rows[1].cells[0].textContent
+        console.log(selecionador)
+        let selecionador2 = organizador.rows[2].cells[0].textContent
+        console.log(selecionador2)
+
+        for(let i = 0; i < 2; i++) {
+            if (selecionador2.textContent > selecionador.textContent) {
+                console.log("maior")
+            }
+        }
     }
         
-    if(clique.dataset.type == "string") console.log("b")
+    if(clique.dataset.type == "string") {
+        let selecionador = organizador.rows[1].cells[1]
+        console.log(selecionador)
+        let selecionador2 = organizador.rows[2].cells[1]
+        console.log(selecionador2)
+    }
 
     // console.log(check)
     
