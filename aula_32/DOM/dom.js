@@ -253,3 +253,32 @@
 
 // 21)
 
+
+
+// 22)
+
+let organizador = document.querySelector("#grid")
+// let organizar = document.querySelector("#grid").addEventListener("click", handler);
+document.querySelectorAll("th").forEach(th => th.addEventListener("click", handler));
+
+function handler(event) {
+    let clique = event.target
+    if (!clique.dataset.type) return
+    alert("lol")
+
+    let corpo = document.querySelector("tbody").children
+    let check = corpo[0]
+    let check2 = corpo[1]
+
+    if(clique.dataset.type == "number") {
+        let selecionador = organizador.rows[1].cells[0]
+        console.log("a")
+        let selecionador2 = organizador.rows[2].cells[1]
+    }
+        
+    if(clique.dataset.type == "string") console.log("b")
+
+    // console.log(check)
+    
+}
+
