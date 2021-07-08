@@ -214,10 +214,39 @@
 
 // 18)
 
-// let campo = document.querySelector(".campo"),
-//     bola = document.querySelector(".bola")
+let campo = document.querySelector(".campo"),
+    bola = document.querySelector(".bola")
 
-// campo.addEventListener("click", (event)
+campo.addEventListener("click", (event) => {
+    // ver melhor pra entender 100%
+    let coordCampo = event.currentTarget.getBoundingClientRect()
+
+    // obter coordenadas
+    let coordBola = {
+        top: event.clientY - coordCampo.top - campo.clientTop - bola.clientHeight / 2,
+        left: event.clientX - coordCampo.left - campo.clientLeft - bola.clientWidth / 2
+    }
+
+    // prevenção borda superior
+    if(coordBola.top < 0) coordBola.top = 0
+
+    // prevenção borda esquerda
+    if(coordBola.left < 0) coordBola.left = 0
+
+    // prevenção borda direita
+    if(coordBola.left + bola.clientWidth > campo.clientWidth) {
+        coordBola.left = campo.clientWidth - bola.clientWidth
+    }
+
+    // prevenção borda inferior
+    if (coordBola.top + bola.clientHeight > campo.clientHeight) {
+        coordBola.top = campo.clientHeight - bola.clientHeight;
+    }
+
+    bola.style.left = coordBola.left + "px"
+    bola.style.top = coordBola.top + "px"
+})
+
 
 // ver como fazer o resto
 
@@ -253,44 +282,58 @@
 
 // 21)
 
+// let tabela = document.querySelector("table")
+// let linhas = tabela.rows
 
+// let celulas = linhas[0].cells[0]
+
+// for(elemento of linhas) {
+//     let celula = elemento.cells
+
+//     for(celulas of celula) {
+//         let texto = celulas.textContent
+
+//         if(texto[0] == texto[2]) {
+//             celulas.style.backgroundColor = "red"
+//         }
+//     }
+// }
 
 // 22)
 
-let organizador = document.querySelector("#grid")
-// let organizar = document.querySelector("#grid").addEventListener("click", handler);
-document.querySelectorAll("th").forEach(th => th.addEventListener("click", handler));
+// let organizador = document.querySelector("#grid")
+// organizador.addEventListener("click", (e) => {
+//     if (e.target.tagName != 'TH') return
 
-function handler(event) {
-    let clique = event.target
-    if (!clique.dataset.type) return
-    alert("lol")
+//     let th = e.target
+//     handler(th.cellIndex, th.dataset.type)
+// })
 
-    let corpo = document.querySelector("tbody").children
-    let check = corpo[0]
-    let check2 = corpo[1]
+// // document.querySelectorAll("th").forEach(th => th.addEventListener("click", handler));
 
-    if(clique.dataset.type == "number") {
-        let selecionador = organizador.rows[1].cells[0].textContent
-        console.log(selecionador)
-        let selecionador2 = organizador.rows[2].cells[0].textContent
-        console.log(selecionador2)
+// function handler(colNum, type) {
 
-        for(let i = 0; i < 2; i++) {
-            if (selecionador2.textContent > selecionador.textContent) {
-                console.log("maior")
-            }
-        }
-    }
-        
-    if(clique.dataset.type == "string") {
-        let selecionador = organizador.rows[1].cells[1]
-        console.log(selecionador)
-        let selecionador2 = organizador.rows[2].cells[1]
-        console.log(selecionador2)
-    }
+//     let tbody = organizador.querySelector('tbody')
+//     let rowsArray = Array.from(tbody.rows)            
+//     let compare
 
-    // console.log(check)
-    
-}
+//     switch (type) {
+//         case 'number':
+//             compare = function(rowA, rowB) {
+//             return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
+//             }
+//             break
+
+//         case 'string':
+//             compare = function(rowA, rowB) {
+//             return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1
+//             }
+//             break
+//     }
+
+//     rowsArray.sort(compare)
+
+//     tbody.append(...rowsArray)
+
+// }
 
