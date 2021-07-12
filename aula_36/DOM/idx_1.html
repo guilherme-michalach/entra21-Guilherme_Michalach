@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Form validation: Tarefa 1</title>
+        <style>
+            body {                
+                color: #333;
+                font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+                padding: 1em;
+                margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h2>Envie seu comentário</h2>
+    <form>        
+        <ul>
+            <li>
+                <label for="uname">Nome de usuário</label>
+                <input type="text" name="uname" id="uname" minlength="5" 
+                maxlength="20" required>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </li>
+            <li>
+                <label for="phone">Telefone:</label>
+                <input type="tel" name="phone" id="phone" maxlength="15" required>
+            </li>
+            <li>
+                <label for="comment">Comentário:</label>
+                <textarea name="comment" id="comment" maxlength="200" required>
+                </textarea>
+            </li>
+            <li>
+                <button>Enviar comentário</button>
+            </li>
+        </ul>
+    </form>
+
+    <script>
+        let form = document.querySelector("form")        
+        
+        form.addEventListener("submit", (event) => {            
+            if (!form.email.value.includes("@")) {
+                alert("Não é possível enviar o formulário")
+                event.preventDefault()
+            }
+
+            if (!form.phone.value.includes)
+        })
+// document.addEventListener("DOMContentLoaded", function() {
+//     let elements = document.getElementsByTagName("INPUT");
+//     for (let i = 0; i < elements.length; i++) {
+//         elements[i].oninvalid = function(e) {
+//             e.target.setCustomValidity("");
+//             if (!e.target.validity.valid) {
+//                 e.target.setCustomValidity("E-mail inválido!");
+//             }
+//         };
+//         elements[i].oninput = function(e) {
+//             e.target.setCustomValidity("");
+//         };
+//     }
+// })
+
+// conferir https://reactgo.com/html5-custom-validation-message/
+
+// let mail = document.querySelector("#email")
+// let teste = mail.textContent
+// console.log(teste)
+// function ValidateEmail(teste) 
+// {
+//  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+//   {
+//     return (true)
+//   }
+//     alert("You have entered an invalid email address!")
+//     return (false)
+// }
+
+        /*
+        Adicione alguns recursos de validação ao formulário:
+
+        * Faça com que todos os campos de entrada sejam obrigatórios para preencher antes que o 
+        formulário possa ser enviado.
+        
+        * Altere o tipo dos campos "Endereço de e-mail" e "Número de telefone" para que o navegador 
+        aplique uma validação mais específica adequada aos dados solicitados.
+        Alterar a mensagem de email: "E-mail inválido"
+
+        * Atribua ao campo "Nome de usuário" um comprimento obrigatório de 5 a 20 caracteres, ao campo
+        "Número de telefone" um comprimento máximo de 15 caracteres e ao campo "Comentário" um 
+        comprimento máximo de 200 caracteres.
+        
+        * Tente enviar seu formulário - ele deve se recusar a enviar até que as restrições acima sejam 
+        seguidas e fornecer mensagens de erro adequadas. Para ajudar, você pode querer adicionar alguns 
+        estilos CSS simples para mostrar quando um campo de formulário é válido ou inválido.
+        */
+    </script>
+  </body>
+</html>

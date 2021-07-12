@@ -61,14 +61,6 @@
 // )
 
 // 3)
-// window.addEventListener("scroll", () => {
-//     document.querySelector(".voltar").textContent = window.pageYOffset + "px"
-// })
-
-window.addEventListener("scroll", () => {
-    document.querySelector(".mostrar-scroll").textContent = window.pageYOffset + "px"
-})
-
 
 let botao = document.querySelector(".voltar")
     botao.addEventListener("click", () => {
@@ -78,3 +70,4 @@ let botao = document.querySelector(".voltar")
 window.addEventListener("scroll", function() {
     botao.hidden = (pageYOffset < document.documentElement.clientHeight)
 })
+
