@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputInicial">
+        Valor Inicial:
+        <input type="number" id="inputInicial" value="10000">
+    </label>
+    <br>
+    <label for="inputJuros">
+        Juros:
+        <input type="number" id="inputJuros" value="5">
+    </label>
+    <br>
+    <label for="inputMeses">
+        Meses:
+        <input type="number" id="inputMeses" value="12">
+    </label>
+    <p id="resultado">Resultado: R$</p>
+    <script>
+
+        const inicial = document.querySelector("#inputInicial")
+        const juros = document.querySelector("#inputJuros")
+        const meses = document.querySelector("#inputMeses")
+
+        function amostraResultado() {
+
+            const valorInicial = +inicial.value,
+                  valorJuros = +juros.value / 100,
+                  valorAnos = +meses.value / 12
+
+            let result = Math.round(valorInicial * (1 + valorJuros * valorAnos))
+        
+            document.querySelector("#resultado").textContent = "Resultado: R$" + result
+        }
+
+        // inicial.oninput = amostraResultado()
+        inicial.addEventListener("input", amostraResultado)
+        juros.addEventListener("input", amostraResultado)
+        meses.addEventListener("input", amostraResultado)
+
+        amostraResultado()
+
+    </script>
+</body>
+</html>

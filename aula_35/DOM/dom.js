@@ -63,6 +63,7 @@
 // 3)
 
 let botao = document.querySelector(".voltar")
+console.log(botao)
     botao.addEventListener("click", () => {
         window.scrollTo(pageXOffset, 0)
     })
