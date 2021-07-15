@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function segundosParaAmanha() {
+            let hoje = new Date()
+
+            let amanha = new Date()
+                amanha.setTime(amanha.getTime() + (24 * 60 * 60 * 1000))
+
+            let amanhaZero = new Date(amanha.getFullYear(), amanha.getMonth(), amanha.getDate())    
+            let diff = amanhaZero - hoje
+
+            return Math.round(diff / 1000)
+        }
+
+        console.log(segundosParaAmanha())
+
+        //forma do professor bem mais fácil
+    </script>
+</body>
+</html>

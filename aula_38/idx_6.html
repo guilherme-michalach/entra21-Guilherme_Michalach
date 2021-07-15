@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let tempo = new Date(2021, 07, 15, 11, 40, 1, 1)
+
+        function tempoPassado(tempo) {
+            let data = new Date(tempo)
+            let data2 = new Date()
+
+            let diff = Math.floor(data2 - data) / 1000
+
+            if (diff <= 1) console.log("Agora")
+            if (diff < 60 && diff > 1) console.log(diff + " segundos atrás")
+            if (diff < 3541) return Math.round(diff / 60) + " minutos atrás"
+            // if (diff <= 3600) {
+            //     return data.getDay()
+            // }
+        }
+
+        tempoPassado(tempo)
+
+        // getDay
+        // getMonth
+        // getFullYear
+        // getHour
+        // getMinute
+
+    </script>
+</body>
+</html>

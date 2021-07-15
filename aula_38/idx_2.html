@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Simplificar isso aqui, que foi um trampo desnecessário
+
+        function diaSemana(valor) {
+            
+            let dias = ["Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado", "Domingo"]
+            console.log(dias[valor])
+        }
+
+        let data = new Date()
+        let teste = data.getDay()
+
+        switch(teste) {
+            case 1:
+                diaSemana(0)
+                break;
+            case 2:
+                diaSemana(1)
+                break;
+            case 3:
+                diaSemana(2)
+                break;
+            case 4:
+                diaSemana(3)
+                break;
+            case 5:
+                diaSemana(4)
+                break;
+            case 6:
+                diaSemana(5)
+                break;
+            case 0:
+                diaSemana(6)
+                break;
+        }
+    </script>
+</body>
+</html>
