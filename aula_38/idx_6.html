@@ -8,7 +8,7 @@
 <body>
     <script>
 
-        let tempo = new Date(2021, 07, 15, 11, 40, 1, 1)
+        let tempo = new Date(2021, 06, 15, 11, 55, 1, 1)
 
         function tempoPassado(tempo) {
             let data = new Date(tempo)
@@ -18,7 +18,7 @@
 
             if (diff <= 1) console.log("Agora")
             if (diff < 60 && diff > 1) console.log(diff + " segundos atrás")
-            if (diff < 3541) return Math.round(diff / 60) + " minutos atrás"
+            if (diff < 3541) console.log(Math.round(diff / 60) + " minutos atrás")
             // if (diff <= 3600) {
             //     return data.getDay()
             // }
