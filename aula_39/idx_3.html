@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="relogio"></p>
+    <script>
+
+        let data = new Date(2021, 03, 15, 1, 5, 3, 0)
+
+        function relogio1Sec(data) {
+
+            let hora = data.getHours(),
+                minuto = data.getMinutes(),
+                segundos = data.getSeconds()
+
+            let um, dois, tres
+
+            if(hora < 10) {
+                um = `0${hora}` 
+            }
+            if(minuto < 10) {
+                dois = `0${minuto}` 
+            }
+            if(segundos < 10) {
+                tres = `0${segundos}` 
+            }
+
+            return `${um}:${dois}:${tres}`
+        }
+
+        // setInterval(relogio1Sec, 1000, data)
+        setInterval( function() { relogio1Sec(data); }, 1000 );
+    </script>
+</body>
+</html>
