@@ -6,34 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="relogio"></p>
+    <input type="text" id="relogio"></button>
     <script>
+        function relogio1Sec() {
 
-        let data = new Date(2021, 03, 15, 1, 5, 3, 0)
-
-        function relogio1Sec(data) {
+            let data = new Date()
 
             let hora = data.getHours(),
                 minuto = data.getMinutes(),
                 segundos = data.getSeconds()
 
-            let um, dois, tres
-
             if(hora < 10) {
-                um = `0${hora}` 
+                hora = `0`+ hora 
             }
             if(minuto < 10) {
-                dois = `0${minuto}` 
+                minuto = `0` + minuto
             }
             if(segundos < 10) {
-                tres = `0${segundos}` 
+                segundos = `0` + segundos 
             }
-
-            return `${um}:${dois}:${tres}`
+            let tempo = `${hora}:${minuto}:${segundos}`      
+            
+            document.getElementById("relogio").value = tempo
         }
 
-        // setInterval(relogio1Sec, 1000, data)
-        setInterval( function() { relogio1Sec(data); }, 1000 );
+        let teste = setInterval(relogio1Sec, 1000)
     </script>
 </body>
 </html>
