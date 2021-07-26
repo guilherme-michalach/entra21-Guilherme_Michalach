@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Pessoa {
+
+            constructor(nome, telefone) {
+                this.nome = nome;
+                this.telefone = telefone;
+            }
+
+        }
+
+        class Agenda {
+            #listaPessoas
+
+            constructor() {
+                this.#listaPessoas = [];
+            }
+
+            armazenaPessoa(nome, telefone) {
+                if (this.#listaPessoas.length < 10) {
+                    this.#listaPessoas.push(new Pessoa(nome, telefone));
+                } else {
+                    console.log("Não há mais espaço disponível na agenda!")
+                }
+            }
+
+            removePessoa(nome) {
+                const indiceP = this.#listaPessoas.findIndex(pessoa => pessoa.nome === nome)
+
+                if (indiceP >= 0) {
+                    this.#listaPessoas.splice(indiceP, 1)
+                    return console.log("Pessoa removida!")
+                }
+
+                return console.log("Pessoa não cadastrada!");
+            }
+
+            buscaPessoa(nome) {
+                const pessoa = this.#listaPessoas.find(pessoa => pessoa.nome === nome)
+
+                if (pessoa) {
+                    return console.log(`O número de telefone de ${nome} é ${pessoa.telefone}`);
+                }
+            }
+
+            imprimeAgenda()  {
+                if (!this.#listaPessoas.length) {
+                    return console.log("Não há nenhuma pessoa cadastrada!");
+                }
+
+                for (let pessoa of this.#listaPessoas) {
+                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`);
+                }
+            }
+
+            imprimePessoa(indice) {
+                if (this.#listaPessoas[indice]) {
+                    const pessoa = this.#listaPessoas[indice];
+                    return console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
+                }
+            } 
+        }
+
+        const agenda = new Agenda();
+        agenda.armazenaPessoa("João", "(47) 9 9999-9999");
+        agenda.armazenaPessoa("Pedro", "(47) 9 9999-9992");        
+        
+        agenda.removePessoa("João");
+        agenda.buscaPessoa("Marcos");
+        agenda.imprimeAgenda();
+        agenda.imprimePessoa(2);
+        console.log(agenda);
+    </script>
+</body>
+</html>

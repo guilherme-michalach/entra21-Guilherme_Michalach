@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Aluno {
+
+            constructor(matricula, nome, prova1, prova2, trab) {
+                this.matricula = matricula;
+                this.nome = nome;
+                this.prova1 = +prova1;
+                this.prova2 = +prova2;
+                this.trab = +trab;
+            }
+
+            media() {
+                let pesoProva = 3,
+                    pesoTrab = 2,
+                    calc = (this.prova1 * pesoProva + this.prova2 * pesoProva + this.trab * pesoTrab) / 8;
+            
+                    return calc.toFixed(2)
+
+            }
+
+            final() {
+                let calc = this.media();
+                if(calc >= 6) {
+                    return "Aprovado";
+                } else {
+                    return "Reprovado";}
+            }
+            
+        }
+    </script>
+</body>
+</html>
