@@ -7,10 +7,21 @@
 </head>
 <body>
     <script>
-        class Voo {
+
+        class Ticket {
 
             constructor(nVoo, data) {
+                this.nVoo = nVoo;
+                this.data = data;
+            }
+        
+        }
 
+        class Voo {
+            #listaPassageiros
+
+            constructor() {
+                this.#listaPassageiros = [];
             }
 
             proximoLivre() {
@@ -30,7 +41,7 @@
             }
 
             getVoo() {
-                
+
             }
 
         }
