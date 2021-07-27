@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+
+            constructor(nome) {
+
+                if(!nome) {
+                    throw "Insira um nome!";
+                }
+
+                this.nome = nome;
+                this.comprimento = "";
+                this.numeroPatas = "";
+                this.cor = "";
+                this.ambiente = "";
+                this.velocidadeMedia = "";
+
+            }
+
+            mostrarDados() {
+
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNúmero de patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}`)
+            
+            }
+        }
+
+        class Peixe extends Animal {
+
+        }
+    </script>
+</body>
+</html>

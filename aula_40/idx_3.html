@@ -18,18 +18,20 @@
         }
 
         class Voo {
-            #listaPassageiros
+            #nVoo
 
-            constructor() {
-                this.#listaPassageiros = [];
+            constructor(nVoo, data) {
+                this.#nVoo = nVoo;
+                this.data = data;
+                this.listaPassageiros = Array.from(Array(100).keys())
             }
 
             proximoLivre() {
-
+                return this.listaPassageiros[0]
             }
 
             verifica() {
-
+                
             }
 
             ocupa() {
