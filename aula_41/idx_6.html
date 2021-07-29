@@ -9,18 +9,14 @@
     <script>
         class Animal {
 
-            constructor(nome) {
-
-                if(!nome) {
-                    throw "Insira um nome!";
-                }
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia) {
 
                 this.nome = nome;
-                this.comprimento = "";
-                this.numeroPatas = "";
-                this.cor = "";
-                this.ambiente = "";
-                this.velocidadeMedia = "";
+                this.comprimento = comprimento;
+                this.numeroPatas = numeroPatas;
+                this.cor = cor;
+                this.ambiente = ambiente;
+                this.velocidadeMedia = velocidadeMedia;
 
             }
 
@@ -29,11 +25,43 @@
                 console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNúmero de patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}`)
             
             }
+
         }
 
         class Peixe extends Animal {
 
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia, caracteristica) {
+
+                super(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia)
+                this.caracteristica = caracteristica;
+
+            }
+
+            mostrarDadosPeixe() {
+
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNúmero de patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}\nCaracteristíca: ${this.caracteristica}`)
+
+            }
+
         }
+
+        class Mamifero extends Animal {
+
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia, alimento) {
+
+                super(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia)
+                this.alimento = alimento;
+
+            }
+
+            mostrarDadosMamifero() {
+
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNúmero de patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}\nAlimento: ${this.alimento}`)
+
+            }
+
+        }
+
     </script>
 </body>
 </html>

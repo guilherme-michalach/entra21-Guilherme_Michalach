@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class OddNumberError extends Error {
+
+            constructor(message) {
+
+                super(message)
+                this.name = "OddNumberError"
+
+            }
+
+        }
+
+        function soma(n1, n2) {
+
+            if((n1 + n2) % 2 == 0) throw new OddNumberError("O número é impar")
+
+            return n1 + n2;
+        
+        }
+
+        try {
+            console.log(soma(1,3))
+            console.log(soma(2,3))
+        } catch(e) {
+            console.log(e.message)
+        }
+        
+        finally {
+        console.log("Finalizando o programa...")
+        }
+    </script>
+</body>
+</html>

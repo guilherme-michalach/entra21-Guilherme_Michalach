@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Calc {
+
+            static soma (n1, n2){
+
+                this.n1 = n1;
+                this.n2 = n2;
+ 
+                return `Soma: ${n1 + n2}`;
+
+            }
+
+            static subtracao (n1, n2){
+
+                this.n1 = n1;
+                this.n2 = n2;
+ 
+                return `Subtração: ${n1 - n2}`;
+                
+            }
+
+            static divisao (n1, n2){
+                
+                if(n2 === 0) throw new Error("O segundo número não pode ser zero");
+                this.n1 = n1;
+                this.n2 = n2;
+ 
+                return `Divisão: ${(n1 / n2).toFixed(2)}`;
+
+            }
+
+            static multiplicacao (n1, n2){
+
+                this.n1 = n1;
+                this.n2 = n2;
+ 
+                return `Multiplicação: ${n1 * n2}`;
+
+            }
+
+        }
+
+        console.log(Calc.soma(1, 2)) // 3
+        console.log(Calc.subtracao(2, 3)) // -1
+        console.log(Calc.multiplicacao(5, 2)) // 10
+        console.log(Calc.divisao(3, 3)) // 1
+
+    </script>
+</body>
+</html>

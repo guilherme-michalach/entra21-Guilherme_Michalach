@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Produto {
+            #descricao
+
+            constructor(nomeLoja, preco, descricao) {
+
+                this.nomeLoja = nomeLoja;
+                this.preco = preco;
+                this.#descricao = descricao;
+
+            }
+
+            getDescricao() {
+                return "Produto de informática"
+            }
+
+        }
+
+        class Mouse extends Produto {
+
+            constructor(nomeLoja, preco, tipo) {
+
+                super(nomeLoja, preco);
+                this.tipo = tipo;
+                this.descricao = super.getDescricao();
+            
+            }
+
+            getDescricao() {
+                console.log(`Tipo: ${this.tipo}\nDescrição: ${this.descricao}`)
+            }
+
+        }
+
+        class Livro extends Produto {
+
+            constructor(nomeLoja, preco, tipo) {
+
+                super(nomeLoja, preco);
+                this.autor = autor;
+                this.descricao = "livro";
+
+            }
+
+            getDescricao() {
+                console.log(`Autor: ${this.autor}\nDescrição: ${this.descricao}`)
+            }
+
+        }
+
+        let carrinho = ["Logitech G203", "1984", "Razer Deathadder", "Alegoria da Caverna", "Mitologia Nórdica"]
+
+
+
+    </script>
+</body>
+</html>

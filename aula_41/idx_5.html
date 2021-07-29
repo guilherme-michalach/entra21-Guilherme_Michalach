@@ -14,44 +14,60 @@
                 this.preco = preco;
             }
 
-            mostrar() {
-                console.log(`O preço do imóvel no endereço ${this.endereco} é R$ ${this.preco}`)
-            }
-
         }
 
         class Novo extends Imovel {
+            #valorAdicional
 
-            constructor(endereco, preco) {
-                super(preco)
+            constructor(endereco, preco, valorAdicional) {
 
-                this.endereco = endereco;
-                this.preco = preco;
+                super(endereco, preco);
+                this.#valorAdicional = valorAdicional;
+
             }
 
+            get valorAdicional() {
+                return this.#valorAdicional;
+            }
+
+            set valorAdicional(preco) {
+                this.#valorAdicional = preco;
+            }
+            
+            
             mostrar() {
-                
-                this.preco = this.preco + this.preco * 0.05;
-                super.mostrar();
+
+                this.preco = this.preco + this.#valorAdicional;
+                console.log(`O preço do imóvel no endereço ${this.endereco} é R$ ${this.preco}`)
             
             }
 
         }
 
         class Velho extends Imovel {
+            #valorMenor
 
-            constructor(endereco, preco) {
-                super(preco)
+            constructor(endereco, preco, valorMenor) {
 
-                this.endereco = endereco;
-                this.preco = preco;
+                super(endereco, preco);
+                this.#valorMenor = valorMenor;
+
             }
 
-            mostrar() {
-                
-                this.preco = this.preco - this.preco * 0.05;
-                super.mostrar();
+            get valorMenor() {
+                return this.#valorMenor;
+            }
 
+            set valorMenor(preco) {
+                this.#valorMenor = preco;
+            }
+            
+            
+            mostrar() {
+
+                this.preco = this.preco - this.#valorMenor;
+                console.log(`O preço do imóvel no endereço ${this.endereco} é R$ ${this.preco}`)
+            
             }
 
         }
