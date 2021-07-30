@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dobrarEm5Segundos(number) {
+            let result
+
+            if(isNaN(number)) {
+                throw new TypeError("O valor deve ser numérico")
+            } else {
+                result = number * number
+            }
+
+            return result
+        }
+
+        try {
+            // console.log(dobrarEm5Segundos("a"))
+            console.log(dobrarEm5Segundos(4))
+            console.log("Finalizando o programa...")
+        } catch(e) {
+            console.log(e.message)
+        } 
+    </script>
+</body>
+</html>

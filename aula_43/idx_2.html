@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dobrar(number, cb) {
+            setTimeout(() => {
+                if(isNaN(number)) {
+                    cb(new TypeError("O valor deve ser numérico"))
+                } else {
+                    let result = number * 2
+                    cb(null, result)
+                    // return `A operação foi bem sucedida! O resultado é ${result}`
+                }
+            }, 5000)
+        }
+
+        dobrar(5, (error, resultado) => {
+            if(error) {
+                console.log(`A operação falhou! ${error.message}`)
+            } else {
+                console.log(`A operação foi bem sucedida! Este é o número dobrado: ${resultado}!`)
+            }
+        })
+
+        // try {
+        //     // console.log(dobrarEm5Segundos("a"))
+        //     console.log(dobrar(4))
+        //     console.log("Finalizando o programa...")
+        // } catch(e) {
+        //     console.log(e.message)
+        // } 
+    </script>
+</body>
+</html>

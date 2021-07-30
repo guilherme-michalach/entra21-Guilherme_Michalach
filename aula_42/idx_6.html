@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class NameLengthError extends Error {
+            constructor(message) {
+            super(message)
+            this.name = "NameLengthError"
+            }
+        }
+
+        class WageError extends Error {
+            constructor(message) {
+            super(message)
+            this.name = "WageError"
+            }
+        }
+
+        class EmailError extends Error {
+            constructor(message) {
+            super(message)
+            this.name = "EmailError"
+            }
+        }
+
+        class validaUsuario {
+            constructor(nome, email, salario) {
+                this.nome = nome;
+                this.email = email;
+                this.salario = salario;
+            }
+
+            validacao() {
+                let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+                if(this.nome.length < 3) {
+                    throw new NameLengthError("O nome deve ter no mínimo 4 caracteres.")
+                }
+                if(this.salario < 465) {
+                    throw new WageError("O salário precisa ser no mínimo R$ 465,00")
+                }
+                if(!emailPattern.test(this.email)) {
+                    throw new EmailError("O email precisa ser válido")
+                }
+                return "Usuário válido"
+            }
+        }
+
+        let teste = new validaUsuario("Guilherme", "g@g.com", 476);
+        try {
+            console.log(teste.validacao())
+            // console.log(dobrarEm5Segundos(4))
+        } catch(e) {
+            console.log(e.message)
+        }  finally {
+        console.log("Finalizando o programa...")
+        }
+    </script>
+</body>
+</html>
