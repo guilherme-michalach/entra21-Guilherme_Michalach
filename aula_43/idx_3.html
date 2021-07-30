@@ -23,19 +23,31 @@
                 idade: 16,
                 email: "marcos@email.com"
             }
-        ]
+        ];
+
+        class UserNotFound extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "UserNotFound";
+            }
+        }
 
         function obtemUsuarioPeloNome(nome, cb) {
             setTimeout(() => {
-
-            })
+                let usuario = cadastro.find(pessoa => pessoa.nome === nome)
+                if(!usuario) {
+                    cb(new UserNotFound("Usuário não cadastrado!"));
+                } else {
+                    cb(null, usuario);
+                }
+            }, 3000)
         }
 
-        obtemUsuarioPeloNome(a, (error, resultado) => {
+        obtemUsuarioPeloNome("Pedro", (error, user) => {
             if(error) {
                 console.log(`Ocorreu um erro! ${error.message}`)
             } else {
-                console.log(`Usuário encontrado:\nnome: ${}\nidade: ${}\nemail: ${}`)
+                console.log(`Usuário encontrado:\nNome: ${user.nome}\nIdade: ${user.idade}\nE-mail: ${user.email}`)
             }
         })
     </script>
