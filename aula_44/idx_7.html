@@ -21,16 +21,18 @@
             });
         }
 
-        umPorSegundo();
-    
-        async function segundosInfinito() {
-            let continuacao = await umPorSegundo()
-            for(let i = 4; i < 1000; i++) {
-                continuacao++
-            return console.log(`${continuacao}s`)
-            }
+        // umPorSegundo();
+
+        async function umPorSegundo() {
+            await delay();
+            console.log("1s");
+            await delay();
+            console.log("2s");
+            await delay();
+            console.log("3s");
         }
-    
+
+        umPorSegundo();
     </script>
 </body>
 </html>
