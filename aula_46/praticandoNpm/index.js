@@ -4,4 +4,4 @@ console.log(cowsay.say( {
     text: "Teste",
     e: "oO",
     T: "L"
-}));   
+}));
