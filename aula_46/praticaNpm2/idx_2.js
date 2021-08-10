@@ -23,14 +23,14 @@ const path = require("path");
 
 (async () => {
     try {
-        const data = await fsp.readFile(path.resolve(__dirname, "alunos.json"));
-        let teste = JSON.parse(data);
+        const data = (await fsp.readFile(path.resolve(__dirname, "alunos.json"))).toString();
+        let dataAlunos = JSON.parse(data);
 
-        if(teste.notas >= 6) {
+        if(dataAlunos.notas >= 6) {
         await fsp.appendFile(path.resolve(__dirname, "aprovados.json"), compiler);
         console.log("Novo conteúdo adicionado (Promise)");
         }
-        console.log(data.toString("utf-8"))
+        console.log(dataAlunos)
     } catch (err) {
         console.log(err.message);
     }
