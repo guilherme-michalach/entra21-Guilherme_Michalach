@@ -1,0 +1,78 @@
+DROP TABLE IF EXISTS dependentes;
+DROP TABLE IF EXISTS colaboradores_projetos;
+DROP TABLE IF EXISTS colaboradores;
+DROP TABLE IF EXISTS projetos;
+DROP TABLE IF EXISTS departamentos;
+
+CREATE TYPE tipo_colaborador AS ENUM ('Horista', 'Assalariado', 'Comissionado');
+
+CREATE TABLE IF NOT EXISTS departamentos (
+	id serial PRIMARY KEY,
+	nome text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS projetos (
+	id serial PRIMARY KEY,
+	data_inicio date NOT NULL,
+	data_termino date NOT NULL,
+	descricao text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS colaboradores (
+	id serial PRIMARY KEY,
+	nome text NOT NULL,
+	horas_trabalhadas integer,
+	total_vendas numeric,
+	percentual_comissao numeric,
+	valor_hora numeric,
+	salario numeric,
+	tipo_colaborador tipo_colaborador NOT NULL,
+	id_gerente serial NOT NULL,
+	id_departamento serial NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS colaboradores_projetos (
+	colaboradores_id serial REFERENCES colaboradores(id),
+	projetos_id serial REFERENCES projetos(id),
+	horas_trabalhadas integer NOT NULL,
+	PRIMARY KEY (colaboradores_id, projetos_id)
+);
+
+CREATE TABLE IF NOT EXISTS dependentes (
+	id serial PRIMARY KEY,
+	nome text NOT NULL,
+	tipo_dependente text NOT NULL,
+	id_colaborador integer REFERENCES colaboradores(id)
+);
+
+INSERT INTO 
+	departamentos (nome)
+VALUES
+	('Guilherme'),
+	('Luiz'),
+	('Jorge');
+
+INSERT INTO 
+	projetos (data_inicio, data_termino, descricao)
+VALUES
+	('2020-05-15', '2021-07-19', 'Teste'),
+	('2020-05-15', '2021-07-19', 'Teste'),
+	('2020-05-15', '2021-07-19', 'Teste');
+
+INSERT INTO 
+	colaboradores (nome, horas_trabalhadas, total_vendas, percentual_comissao, valor_hora, salario, tipo_colaborador)
+VALUES
+	('Pedro', 0, 1500, 8, 0, 1700, 'Horista'),
+	('Pedro', 0, 1500, 8, 0, 1700, 'Comissionado'),
+	('Pedro', 0, 1500, 8, 0, 1700, 'Assalariado');
+
+INSERT INTO 
+	colaboradores_projetos (colaboradores_id, projetos_id, horas_trabalhadas)
+VALUES
+	(1, 3, 45),
+	(2, 3, 23),
+	(3, 1, 50);
+
+-- INSERT INTO 
+-- 	dependentes ()
+-- VALUES

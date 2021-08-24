@@ -1,0 +1,86 @@
+DROP TABLE IF EXISTS compras;
+DROP TABLE IF EXISTS livros;
+DROP TABLE IF EXISTS editoras;
+DROP TABLE IF EXISTS clientes;
+DROP TYPE tipo_pessoa;
+
+CREATE TYPE tipo_pessoa AS ENUM ('PF', 'PJ');
+
+CREATE TABLE IF NOT EXISTS clientes (
+	id SERIAL PRIMARY KEY,
+	nome text NOT NULL,
+	rua text NOT NULL,
+	numero integer NOT NULL,
+	cidade text NOT NULL,
+	estado character(2) NOT NULL,
+	numero_documento text NOT NULL UNIQUE,
+	tipo_pessoa tipo_pessoa NOT NULL,
+	pontos integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS editoras (
+	id SERIAL PRIMARY KEY,
+	nome_gerente text NOT NULL,
+	rua text NOT NULL,
+	numero integer NOT NULL,
+	cidade text NOT NULL,
+	estado character(2) NOT NULL,
+	telefone text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS livros (
+	id SERIAL PRIMARY KEY,
+	nome_autor text NOT NULL,
+	assunto text NOT NULL,
+	quantidade_estoque integer NOT NULL,
+	id_editora serial REFERENCES editoras(id)
+);
+
+CREATE TABLE IF NOT EXISTS compras (
+	clientes_id serial NOT NULL,
+	livros_id serial NOT NULL,
+	data timestamp with time zone DEFAULT now(),
+	valor numeric NOT NULL,
+	PRIMARY KEY(clientes_id, livros_id, data)
+);
+
+INSERT INTO clientes (nome,
+	rua,
+	numero,
+	cidade,
+	estado,
+	numero_documento,
+	tipo_pessoa,
+	pontos)
+VALUES
+	('Guilherme', 'Santos', 1, 'Timbó', 'SC', '111.111.111-12', 'PJ', 1),
+	('Allan', 'Paraíba', 2, 'Timbó', 'SC', '222.222.222.22', 'PF', 2),
+	('Paulo', 'Pernambuco', 3, 'Timbó', 'SC', '333.333.333-33', 'PF', 3);
+
+INSERT INTO editoras (nome_gerente,
+	rua,
+	numero,
+	cidade,
+	estado,
+	telefone)
+VALUES
+	('Allan', 'Balneário', 1, 'Timbó', 'SC', '991122022'),
+	('Guilherme', 'Teste', 2, 'Timbó', 'SC', '991122021'),
+	('João', 'Teste2', 3, 'Timbó', 'SC', '991122020');
+
+INSERT INTO livros (nome_autor,
+	assunto,
+	quantidade_estoque,
+	id_editora)
+VALUES
+	('Testador1', 'Teste1', 1, 1),
+	('Testador2', 'Teste2', 2, 2),
+	('Testador3', 'Teste3', 3, 3);
+
+INSERT INTO compras (clientes_id,
+	livros_id,
+	valor)
+VALUES
+	(1, 4, 12),
+	(2, 5, 13),
+	(3, 6, 14);
