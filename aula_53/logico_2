@@ -59,11 +59,13 @@ VALUES
 -- A)
 
 -- SELECT
--- 	salario
+-- 	*
 -- FROM
 -- 	funcionarios
 -- WHERE
--- salario > 1000;
+-- salario > 1000
+-- ORDER BY
+-- 	nome, sobrenome;
 
 -- B)
 
@@ -155,16 +157,14 @@ VALUES
 	
 -- J)
 
-SELECT
-	d.nome departamento,
-	max(salario)
-FROM
-	funcionarios f
-INNER JOIN
-	departamentos d
-ON
-	d.id = f.id_departamento
-GROUP BY
-	d.nome;
-
-	
+-- SELECT
+-- 	d.nome departamento,
+-- 	max(salario)
+-- FROM
+-- 	funcionarios f
+-- INNER JOIN
+-- 	departamentos d
+-- ON
+-- 	d.id = f.id_departamento
+-- GROUP BY
+-- 	d.nome;
