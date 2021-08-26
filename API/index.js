@@ -1,63 +1,47 @@
+const { request, response, json } = require("express");
 const express = require("express");
 const app = express();
-
 const PORT = 3000;
 
-// Rotas da raiz/root
+// Importando as rotas
+
+const usersRoutes = require("./routes/usersRoutes");
+
+// Definindo os middlewares
+ 
+app.use(express.json());
+
+// Definindo as rotas
+
+app.use("/users", usersRoutes);
+ 
+// Rotas da raíz
 app.get("/", (request, response) => {
-    // console.log(request);
-    // console.log(response);
-    response.send('Hello World!');
+    response.send("Olá, Mundo!");
 });
-
-app.post('/', (request, response) => {
-    response.send('Método Post')
+ 
+app.post("/", (request, response) => {
+    response.send("Método POST");
 });
-
-app.put('/', (request, response) => {
-    response.send("Método PUT")
+ 
+app.put("/", (request, response) => {
+    response.send("Método PUT");
 });
-
-app.delete('/', (request, response) => {
-    response.send("Método DELETE")
+ 
+app.delete("/", (request, response) => {
+    response.send("Método DELETE");
 });
-
+ 
 // Banco de dados
-
-const users = [
-    {id: 1, name: "Pedro", email: "pedro@gmail.com"},
-    {id: 2, name: "Jorge", email: "jorge@gmail.com"},
-    {id: 3, name: "Lucas", email: "lucas@gmail.com"},
-];
-
+ 
 // Rotas de usuário "/users"
+ 
+// Obter um usuário em específico
+ 
+// Criar um usuário
 
-app.get("/users", (request, response) => {
-    response.json(users);
-});
+// Atualizar as informções de um usuário
 
-app.get("/users/:id", (request, response) => {
-    const user_id = request.params.id;
-    
-    const user = users.find(user => user.id === user_id);
+// Deletar um usuário
 
-    if (!user) {
-        response.status(404).json({ message: "User not found!" });
-    }
-
-    response.json(user);
-});
-
-app.get("/users", (request, response) => {
-    
-});
-
-app.get("/users", (request, response) => {
-    
-});
-
-app.get("/users", (request, response) => {
-    
-});
-
-app.listen(PORT, () => console.log("Server rodando..."));
+app.listen(PORT, () => console.log("O servidor está rodando..."));
