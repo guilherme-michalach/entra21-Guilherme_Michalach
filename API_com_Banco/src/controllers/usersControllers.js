@@ -132,11 +132,33 @@ async function createPost(req, res, next) {
     }
 }
 
+async function getPosts(req, res, next) {
+    const userId = req.params.id;
+    
+    try {
+        const user = await User.findOne({
+            where: { id: userId }
+        });
+            
+        if (!user) {
+        res.status(404).json({ message: "User not found!" });
+        }
+   
+        const posts = await Post.findAll();
+
+        res.json(posts);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: "Server Error"})
+    }
+}
+
 module.exports = {
     getAllUsers,
     getUserById,
     createUser,
     updateUser,
     deleteUser,
-    createPost
+    createPost,
+    getPosts
 };
