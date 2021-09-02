@@ -7,6 +7,12 @@ const PORT = 3000;
 
 const usersRoutes = require("./routes/usersRoutes");
 
+const postsRoutes = require("./routes/postsRoutes");
+
+// Definindo local dos arquivos estáticos
+
+app.use("/static", express.static('uploads'));
+
 // Definindo os middlewares
  
 app.use(express.json());
@@ -14,6 +20,8 @@ app.use(express.json());
 // Definindo as rotas
 
 app.use("/users", usersRoutes);
+
+app.use("/posts", postsRoutes);
  
 // Rotas da raíz
 app.get("/", (request, response) => {

@@ -1,4 +1,4 @@
-const { User } = require("../db/models");
+const { User, Post } = require("../db/models");
 
 async function getAllUsers(req, res, next) {
     try {
@@ -95,7 +95,7 @@ async function deleteUser(req, res, next) {
         res.status(204).end();
     } catch (err) {
         console.log(err);
-        res.status(500).json({ message: "Server Error"});
+        res.status(500).json({ message: "Server Error" });
     }
 }
 
@@ -103,10 +103,29 @@ async function createPost(req, res, next) {
     const userId = req.params.id;
     const { title, content } = req.body;
     const file = req.file;
+    
+    let image;
+    if(file) {
+        image = `${process.env.APP_URL}/static/${file.filename}`;
+    }
+        // console.log(file);
+        // res.end();
 
     try {
-        console.log(file);
-        res.end();
+        const user = await User.findOne({ where: { id: userId }});
+
+        if(!user) {
+            return res.status(404).json({ message: "User not found!" });
+        }
+
+        const post = await Post.create({
+        title,
+        content,
+        image,
+        user_id: userId
+        });
+            
+        res.status(201).json(post);
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: "Server Error" });
