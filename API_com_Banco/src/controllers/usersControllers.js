@@ -144,7 +144,9 @@ async function getPosts(req, res, next) {
         res.status(404).json({ message: "User not found!" });
         }
    
-        const posts = await Post.findAll();
+        const posts = await Post.findAll({
+            where: { user_id: userId }
+        });
 
         res.json(posts);
     } catch (err) {
